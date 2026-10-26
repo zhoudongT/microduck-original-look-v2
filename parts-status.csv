@@ -1,0 +1,42 @@
+﻿geometry,quantity,status
+OFF_right_shell,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_trunk_base,1,"Original internal link, scaled reference only; attachment to UBT not designed"
+OFF_power_support,1,"Original internal link, scaled reference only; attachment to UBT not designed"
+OFF_left_shell,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_yaw2roll,2,"Original internal link, scaled reference only; attachment to UBT not designed"
+OFF_bearing_roll,2,"Original internal link, scaled reference only; attachment to UBT not designed"
+OFF_hip_l,2,"Original internal link, scaled reference only; attachment to UBT not designed"
+OFF_upper_leg_left,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_upper_leg_rigidity_plate,2,"Original internal link, scaled reference only; attachment to UBT not designed"
+OFF_leg,2,"Original internal link, scaled reference only; attachment to UBT not designed"
+OFF_sole_left,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_foot_left,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_ankle_left,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_neck,2,"Original internal link, scaled reference only; attachment to UBT not designed"
+OFF_neck_pitch,1,"Original internal link, scaled reference only; attachment to UBT not designed"
+OFF_yaw_roll_motion,1,"Original internal link, scaled reference only; attachment to UBT not designed"
+OFF_lens,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_face_part,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_jaw_soft,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_motor_support,1,"Original internal link, scaled reference only; attachment to UBT not designed"
+OFF_top_head_shell,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_soft_mouth_top,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_noenoeil,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_jaw,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_bottom_head_shell,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_upper_leg_right,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_ankle_right,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_sole_right,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+OFF_foot_right,1,Official outer geometry uniformly scaled; holes/walls not redesigned
+REF_UBT12HC_envelope,15,UBT candidate cartridge; shaft/horn dimensions still assumed
+P01_cage_back,15,UBT candidate cartridge; shaft/horn dimensions still assumed
+P02_cage_front,15,UBT candidate cartridge; shaft/horn dimensions still assumed
+P03_output_yoke,15,UBT candidate cartridge; shaft/horn dimensions still assumed
+REF_original_horn_assumed,15,UBT candidate cartridge; shaft/horn dimensions still assumed
+P04_horn_carrier_TO_MEASURE,15,UBT candidate cartridge; shaft/horn dimensions still assumed
+P05_horn_retainer,15,UBT candidate cartridge; shaft/horn dimensions still assumed
+REF_MR105ZZ,15,UBT candidate cartridge; shaft/horn dimensions still assumed
+REF_M3_screw,60,UBT candidate cartridge; shaft/horn dimensions still assumed
+REF_M3_nut,60,UBT candidate cartridge; shaft/horn dimensions still assumed
+REF_M3_short,60,UBT candidate cartridge; shaft/horn dimensions still assumed
+REF_M5_axle,15,UBT candidate cartridge; shaft/horn dimensions still assumed

@@ -1,0 +1,557 @@
+[
+  {
+    "joint": "left_hip_yaw",
+    "source": "trunk_base__xl330__4",
+    "matrix": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        35.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        -1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        255.96331867884
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      1.4,
+      0.0
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "right_hip_yaw",
+    "source": "trunk_base__xl330__7",
+    "matrix": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        -35.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        -1.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        255.96331867884
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      1.4,
+      0.0
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "left_hip_roll",
+    "source": "yaw2roll__xl330__11",
+    "matrix": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        35.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        -12.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        188.36331867884002
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "left_knee",
+    "source": "upper_leg_left__xl330__17",
+    "matrix": [
+      [
+        0.03853042,
+        -0.9961947,
+        -0.07817628,
+        99.19755964
+      ],
+      [
+        -0.8969722,
+        0.0,
+        -0.44208695,
+        41.59325915
+      ],
+      [
+        0.44040467,
+        0.08715574,
+        -0.89355895,
+        132.27959835684
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      5.2,
+      0.0
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "left_hip_pitch",
+    "source": "upper_leg_left__xl330__20",
+    "matrix": [
+      [
+        0.07817628,
+        -0.9961947,
+        0.03853042,
+        104.1105553
+      ],
+      [
+        0.44208695,
+        0.0,
+        -0.8969722,
+        1.8666941999999995
+      ],
+      [
+        0.89355895,
+        0.08715574,
+        0.44040467,
+        188.43539645683998
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      5.2,
+      0.0
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "left_ankle",
+    "source": "leg__xl330__22",
+    "matrix": [
+      [
+        -0.03814376,
+        0.9961947,
+        -0.07836566,
+        88.34456929000001
+      ],
+      [
+        0.89914516,
+        0.0,
+        -0.43765053,
+        7.626542635
+      ],
+      [
+        -0.43598514,
+        -0.08715574,
+        -0.89572364,
+        63.303175478840004
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      0.0,
+      -6.5
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "neck_pitch",
+    "source": "neck__xl330__28",
+    "matrix": [
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.93969262,
+        0.0,
+        -0.34202014,
+        -48.23777846
+      ],
+      [
+        -0.34202014,
+        0.0,
+        -0.93969262,
+        309.54293749884005
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "head_pitch",
+    "source": "neck__xl330__29",
+    "matrix": [
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.93969262,
+        0.0,
+        0.34202014,
+        -21.560207199999997
+      ],
+      [
+        0.34202014,
+        0.0,
+        0.93969262,
+        382.83896193884
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "head_yaw",
+    "source": "yaw_roll_motion__xl330__34",
+    "matrix": [
+      [
+        0.0,
+        0.0,
+        1.0,
+        -11.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0,
+        -17.79798566
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        459.56178075884003
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "mouth",
+    "source": "jaw_soft__xl330__39",
+    "matrix": [
+      [
+        0.0,
+        1.0,
+        0.0,
+        50.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -28.99798566
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        466.56178075884003
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      1,
+      -1,
+      0
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "head_roll",
+    "source": "jaw_soft__xl330__43",
+    "matrix": [
+      [
+        0.0,
+        0.0,
+        1.0,
+        -11.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        48.00201434
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        459.56178075884003
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "right_hip_roll",
+    "source": "bearing_roll__xl330__54",
+    "matrix": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        -35.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        -12.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        188.36331867884002
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "right_knee",
+    "source": "upper_leg_right__xl330__59",
+    "matrix": [
+      [
+        0.03853042,
+        0.9961947,
+        0.07817628,
+        -99.19755964
+      ],
+      [
+        0.8969722,
+        0.0,
+        -0.44208695,
+        41.59325915
+      ],
+      [
+        -0.44040467,
+        0.08715574,
+        -0.89355895,
+        132.27959835684
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      5.2,
+      0.0
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "right_hip_pitch",
+    "source": "upper_leg_right__xl330__63",
+    "matrix": [
+      [
+        0.07817628,
+        0.9961947,
+        -0.03853042,
+        -104.1105553
+      ],
+      [
+        -0.44208695,
+        0.0,
+        -0.8969722,
+        1.8666941999999995
+      ],
+      [
+        -0.89355895,
+        0.08715574,
+        0.44040467,
+        188.43539645683998
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      5.2,
+      0.0
+    ],
+    "original_joint_interface_preserved": false
+  },
+  {
+    "joint": "right_ankle",
+    "source": "leg_2__xl330__64",
+    "matrix": [
+      [
+        -0.03814376,
+        -0.9961947,
+        0.07836566,
+        -88.34456929000001
+      ],
+      [
+        -0.89914516,
+        0.0,
+        -0.43765053,
+        7.626542635
+      ],
+      [
+        0.43598514,
+        -0.08715574,
+        -0.89572364,
+        63.303175478840004
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "assumed_drive_side": "XL negative X",
+    "packaging_offset_v1_local_mm": [
+      0.0,
+      0.0,
+      -6.5
+    ],
+    "original_joint_interface_preserved": false
+  }
+]

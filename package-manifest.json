@@ -1,0 +1,553 @@
+{
+  "format": "microduck-package-manifest-v1",
+  "source_archive": "microduck-original-look-v2.zip",
+  "source_archive_sha256": "22687738ed7e0b9ec4bdf95668dd126625d7a16b62196e356d45816b8b72b139",
+  "scope": "GitHub source package after portability cleanup; excludes this manifest and Git metadata",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 91,
+      "sha256": "dbff4e09a88ad02ffb81da879ba05c8c78cd0a3a61c53f8e35f932145db2b126"
+    },
+    {
+      "path": ".gitignore",
+      "size": 99,
+      "sha256": "73ecef7fcb4251abd8ee1bb6b38dd82d896e80b442c7a89996967462665009ff"
+    },
+    {
+      "path": "assembled.png",
+      "size": 114193,
+      "sha256": "201c7587ff3470508c470bf093fe3d44d84c502365074d6304dfa05cb197d9bd"
+    },
+    {
+      "path": "build_v2.py",
+      "size": 11766,
+      "sha256": "5f4d338661b48c594d2a2481c9ca1921f70e3517f735e8647e565db5be085119"
+    },
+    {
+      "path": "cad/adapter-step/P01_cage_back.step",
+      "size": 389276,
+      "sha256": "f9127fdbf2003ecf1bfd78b1b4117efc7b6956efac15e4d8ca38bf9b8c2052f5"
+    },
+    {
+      "path": "cad/adapter-step/P02_cage_front.step",
+      "size": 293829,
+      "sha256": "2d144cf4b3b30adf5506d1f25ecbb62b0c0df92057c6b4a0256417f6737e0668"
+    },
+    {
+      "path": "cad/adapter-step/P03_output_yoke.step",
+      "size": 142562,
+      "sha256": "dd49f6e64d80965a26ead1ba0e5bb606babb4e1c3511c4018c5c0978233d1023"
+    },
+    {
+      "path": "cad/adapter-step/P04_horn_carrier_TO_MEASURE.step",
+      "size": 141588,
+      "sha256": "874d72f626df6ea8230a4e2e5589a5046414349e88646adff53c107ebb11e094"
+    },
+    {
+      "path": "cad/adapter-step/P05_horn_retainer.step",
+      "size": 23899,
+      "sha256": "6b7f930c106d30c06e4afaaec872d8ed5cf77e849f68e48122aa536259d0d0cb"
+    },
+    {
+      "path": "cad/adapter-stl/P01_cage_back.stl",
+      "size": 338084,
+      "sha256": "63c4ee95d8001c7e99c581e2f2dead84f09fe2801697f65e977753126d931ed4"
+    },
+    {
+      "path": "cad/adapter-stl/P02_cage_front.stl",
+      "size": 398884,
+      "sha256": "73cee591645dff405607977331fd22b3d5f85b1293c5c98e535d2d235e07898d"
+    },
+    {
+      "path": "cad/adapter-stl/P03_output_yoke.stl",
+      "size": 369884,
+      "sha256": "b571544cc4fee12c748caf5d111e4a1348abe35f31b74074294bd949a1f9ee0f"
+    },
+    {
+      "path": "cad/adapter-stl/P04_horn_carrier_TO_MEASURE.stl",
+      "size": 301684,
+      "sha256": "c5dca34f616b1d647650fad1fbef54faf6fceac46e4fc8138aa62550925016d5"
+    },
+    {
+      "path": "cad/adapter-stl/P05_horn_retainer.stl",
+      "size": 101684,
+      "sha256": "ff9b50bbca3e66834e8b3ee9e48b252ffb13bc0a30b158ae58f1e80fe91551b7"
+    },
+    {
+      "path": "cad/exterior-study-stl/ankle_left_2x_REFERENCE.stl",
+      "size": 248984,
+      "sha256": "8531cae43723a7f38354ae1f5e402685290e3865fe5381aa5078a22bbe4c6b9f"
+    },
+    {
+      "path": "cad/exterior-study-stl/ankle_right_2x_REFERENCE.stl",
+      "size": 248884,
+      "sha256": "6ca5ca450707837d6eca5fb3f331b73721ff92de09cbb09babf027c07fbc452e"
+    },
+    {
+      "path": "cad/exterior-study-stl/bottom_head_shell_2x_REFERENCE.stl",
+      "size": 1048584,
+      "sha256": "1c326dba745f943a8edba90727597561b6e99cbd4015c7622128994a88d72f53"
+    },
+    {
+      "path": "cad/exterior-study-stl/face_part_2x_REFERENCE.stl",
+      "size": 570684,
+      "sha256": "3518aa7853cfc0ac9a83d5de856af36f50adfa0eb9fed04e2f4267bc5ed2ae53"
+    },
+    {
+      "path": "cad/exterior-study-stl/foot_left_2x_REFERENCE.stl",
+      "size": 996184,
+      "sha256": "a4e2537bd9be7292c10733fc2d9e9033ec8da9446344a02f9e3cc0ed4e9cea82"
+    },
+    {
+      "path": "cad/exterior-study-stl/foot_right_2x_REFERENCE.stl",
+      "size": 997684,
+      "sha256": "f0ad36b91149030b79471620b3a99e9bf9d60e21f534f488117b29acea946118"
+    },
+    {
+      "path": "cad/exterior-study-stl/jaw_2x_REFERENCE.stl",
+      "size": 495984,
+      "sha256": "57197f491d10e1313a520e2106de271a47933717ad6856dadbd2a7011d0e5e99"
+    },
+    {
+      "path": "cad/exterior-study-stl/jaw_soft_2x_REFERENCE.stl",
+      "size": 336384,
+      "sha256": "66de3f68c63d976ec56e622cf7b02288a1d75830f14137f6a3406e622bd064c4"
+    },
+    {
+      "path": "cad/exterior-study-stl/left_shell_2x_REFERENCE.stl",
+      "size": 1048584,
+      "sha256": "b58312071370b42f93bd65a4dc112ce4b11335a692c597aec232410e4fc17dc4"
+    },
+    {
+      "path": "cad/exterior-study-stl/noenoeil_2x_REFERENCE.stl",
+      "size": 49284,
+      "sha256": "486e78ab9f70ae64d7ff5ce7f8665ac8886e25ee354288c69fb72bbaa7060681"
+    },
+    {
+      "path": "cad/exterior-study-stl/right_shell_2x_REFERENCE.stl",
+      "size": 1048584,
+      "sha256": "16de091bbc101e96f4f82b6ea176dcbd2abc6f2125647b186768a1ab14a953fc"
+    },
+    {
+      "path": "cad/exterior-study-stl/soft_mouth_top_2x_REFERENCE.stl",
+      "size": 393584,
+      "sha256": "4a88c07273c63fc54befe4bdc50a0ef34e19d669aeda926466eecc91b65a19b3"
+    },
+    {
+      "path": "cad/exterior-study-stl/sole_left_2x_REFERENCE.stl",
+      "size": 789484,
+      "sha256": "7d3528e7125912570fe06e40e73985799012b547635df013644b8757b2b4e833"
+    },
+    {
+      "path": "cad/exterior-study-stl/sole_right_2x_REFERENCE.stl",
+      "size": 795184,
+      "sha256": "da9d828bc266acefdf0c53b913101bd0d3f9ba29c2f6422f79707f0cfe31aee7"
+    },
+    {
+      "path": "cad/exterior-study-stl/top_head_shell_2x_REFERENCE.stl",
+      "size": 806084,
+      "sha256": "302d8b15fe8e91c068927ea73080b001c825d834b7c881fd50db65a7cf03a6ee"
+    },
+    {
+      "path": "cad/exterior-study-stl/upper_leg_left_2x_REFERENCE.stl",
+      "size": 612584,
+      "sha256": "c2daf7bcf01b45131438ea8472464a3bec1166f24d2e93cd084a02de549e81bb"
+    },
+    {
+      "path": "cad/exterior-study-stl/upper_leg_right_2x_REFERENCE.stl",
+      "size": 612584,
+      "sha256": "d51c43aa6177629b48717ca7142b1d2d03a6de8847735e859cbeb56284612589"
+    },
+    {
+      "path": "cad/microduck-v2-layout.glb",
+      "size": 2546768,
+      "sha256": "d9cc7445b50aa32db10f68b949100c71f7f2ce07ca91fb8b210aac3b6f028123"
+    },
+    {
+      "path": "cad/slim_cartridge/v1/step/P01_cage_back.step",
+      "size": 389276,
+      "sha256": "f9127fdbf2003ecf1bfd78b1b4117efc7b6956efac15e4d8ca38bf9b8c2052f5"
+    },
+    {
+      "path": "cad/slim_cartridge/v1/step/P02_cage_front.step",
+      "size": 293829,
+      "sha256": "2d144cf4b3b30adf5506d1f25ecbb62b0c0df92057c6b4a0256417f6737e0668"
+    },
+    {
+      "path": "cad/slim_cartridge/v1/step/P03_output_yoke.step",
+      "size": 142562,
+      "sha256": "dd49f6e64d80965a26ead1ba0e5bb606babb4e1c3511c4018c5c0978233d1023"
+    },
+    {
+      "path": "cad/slim_cartridge/v1/stl/P01_cage_back.stl",
+      "size": 338084,
+      "sha256": "63c4ee95d8001c7e99c581e2f2dead84f09fe2801697f65e977753126d931ed4"
+    },
+    {
+      "path": "cad/slim_cartridge/v1/stl/P02_cage_front.stl",
+      "size": 398884,
+      "sha256": "73cee591645dff405607977331fd22b3d5f85b1293c5c98e535d2d235e07898d"
+    },
+    {
+      "path": "cad/slim_cartridge/v1/stl/P03_output_yoke.stl",
+      "size": 369884,
+      "sha256": "b571544cc4fee12c748caf5d111e4a1348abe35f31b74074294bd949a1f9ee0f"
+    },
+    {
+      "path": "cad/slim_cartridge/validation.json",
+      "size": 14636,
+      "sha256": "ad09adf87b0989ae5df03608ca1a24b72a203b19a3bd35c8bb63332d6c9db219"
+    },
+    {
+      "path": "cad/slim_cartridge/xl/step/P01_cage_back.step",
+      "size": 383054,
+      "sha256": "610e0942966a6f30c791afde1f3f646a9b88b05e415bb91d0f99e616dd251eee"
+    },
+    {
+      "path": "cad/slim_cartridge/xl/step/P02_cage_front.step",
+      "size": 286191,
+      "sha256": "f7038974db442661155368071c6f34fa5649d103157038f652a523971396f368"
+    },
+    {
+      "path": "cad/slim_cartridge/xl/step/P03_output_yoke.step",
+      "size": 141834,
+      "sha256": "536fc89d4f0ac39a9f90e42658a0ddc91cbb6d24fac69dd9abf75e7f310eb10e"
+    },
+    {
+      "path": "cad/slim_cartridge/xl/stl/P01_cage_back.stl",
+      "size": 338084,
+      "sha256": "0cf9334805bcd97db461102b5da0532ac29a5765cf0c80a4942bd88f8d4817e0"
+    },
+    {
+      "path": "cad/slim_cartridge/xl/stl/P02_cage_front.stl",
+      "size": 398884,
+      "sha256": "8ee629e02de20304f320cbc0c6ecc6adfa0f5ec0953dbfe0115bff20c5a82cf9"
+    },
+    {
+      "path": "cad/slim_cartridge/xl/stl/P03_output_yoke.stl",
+      "size": 369884,
+      "sha256": "ae905f712c6499d84bb4a112f8b1d5a15941f4440c7336dc6cf797769a6f5557"
+    },
+    {
+      "path": "check_exterior.py",
+      "size": 1474,
+      "sha256": "77c74565a9a76cace0f5dfde887fd25948eec45e4a13d097c33dee97cabf86db"
+    },
+    {
+      "path": "exploded.png",
+      "size": 99233,
+      "sha256": "1a2c746fe798af1654cd0f3bffa5297b096725390c6bf275dd58e87745647771"
+    },
+    {
+      "path": "exterior-fidelity-report.json",
+      "size": 3746,
+      "sha256": "b1a247784191028d0b354ae3193a9831012ee12046d9a83908c4447bde33ecad"
+    },
+    {
+      "path": "internal.png",
+      "size": 116471,
+      "sha256": "3f273133afb6b81d1d2523256cf60993ec54e90b51da2bb43c652780717a3904"
+    },
+    {
+      "path": "joint.png",
+      "size": 101907,
+      "sha256": "ed4eaee9855386cbbb94ff660116517e7e60ce988f87da4ed8137f2eb4617b3f"
+    },
+    {
+      "path": "mobile.png",
+      "size": 75696,
+      "sha256": "e3e646a639dbdf15162c66ad1f24007f9d45078f9882a72805067fe2f160805c"
+    },
+    {
+      "path": "motor-layout.json",
+      "size": 9445,
+      "sha256": "59b2ba6b0b262e4fb2e3d00498ed68bafebd617f7fbb5db17d530f352f9b59b1"
+    },
+    {
+      "path": "packaging-report.json",
+      "size": 5166,
+      "sha256": "20b7d842b928a24770df83ea8958047d41ca7c90b202f330a6e14d4050a4bcd9"
+    },
+    {
+      "path": "parts-status.csv",
+      "size": 3665,
+      "sha256": "f3c727d198bc3ddb8a361bb3038b664e348e2c733499c669d4d1d1e13305d4ab"
+    },
+    {
+      "path": "prepare_preview.py",
+      "size": 1202,
+      "sha256": "55aa034436c600c096b47e27fa50f6d79f305109275835c4446879f0e36cc6ea"
+    },
+    {
+      "path": "preview-header.html",
+      "size": 1615,
+      "sha256": "23bb0870e29f59037780e12673367f4e0d47dbb01960767b2afe8b99948abfb8"
+    },
+    {
+      "path": "preview.html",
+      "size": 994028,
+      "sha256": "df3f4baa64a2d656e48cd67a0361cb3be1a20d22971c4756cb84623c7bcaf057"
+    },
+    {
+      "path": "README.md",
+      "size": 8019,
+      "sha256": "855f1ef5d1f93e068df0ede153cebef018abf9943b727b6d0cc1717047cab7b5"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 104,
+      "sha256": "73cee3f0bb572a35fb847fe3ec0c0638b2d4040aee8906cd11d395c877b04154"
+    },
+    {
+      "path": "scene.json",
+      "size": 2992396,
+      "sha256": "5cf110bd70a3c54f32892b39a3d76301b4533c90e380230b13cf59b164937187"
+    },
+    {
+      "path": "slim-cartridge-report.json",
+      "size": 14801,
+      "sha256": "4abae8436a182ef6aaae22f81566fec9b627d39b642e1eda7fd4d0c2ff429343"
+    },
+    {
+      "path": "slim_cartridge.py",
+      "size": 18962,
+      "sha256": "45efd314f5b95af8c43171ecce04dad6914b6b87d9b28b296aaf4541ba5807bb"
+    },
+    {
+      "path": "source/cartridge-v1/joints.json",
+      "size": 8124,
+      "sha256": "980f589c8baf07a6a22415d6eb1c4c97702fcf95202a68269e3c60b6f609c003"
+    },
+    {
+      "path": "source/cartridge-v1/scene.json",
+      "size": 3222601,
+      "sha256": "683c5278ced3bf0b7a3db2ea71432b77286096c36beb1b1d59c0568b3c574c3a"
+    },
+    {
+      "path": "source/official/assets/ankle_left.stl",
+      "size": 248984,
+      "sha256": "2ec1bd89205b407efebaa9a8898ad9fea741389d87b80ecc5c96b21d1668119e"
+    },
+    {
+      "path": "source/official/assets/ankle_right.stl",
+      "size": 248884,
+      "sha256": "f83f388ae00787415e76b8ecaab769f08f25b8c4e90c1937ff0fc4d68d81722e"
+    },
+    {
+      "path": "source/official/assets/banana_pcb_locker.stl",
+      "size": 69484,
+      "sha256": "42ddde9d01bf5d91f88b99847017f14d97d2537ee27383c6d41dd8bf30a51134"
+    },
+    {
+      "path": "source/official/assets/bearing_roll.stl",
+      "size": 121084,
+      "sha256": "b5603a64b2d965ad75ea847767b5798130852e12a658fde7b5068fc457e2adcc"
+    },
+    {
+      "path": "source/official/assets/bottom_head_shell.stl",
+      "size": 1048584,
+      "sha256": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2"
+    },
+    {
+      "path": "source/official/assets/elec_rpi_robot_hat_pcb.stl",
+      "size": 942884,
+      "sha256": "1a61582759d82b5b4df9b7d11099bf1bb3944fc77e6b74d3237adf24dd5d03d7"
+    },
+    {
+      "path": "source/official/assets/face_part.stl",
+      "size": 570684,
+      "sha256": "d0e89a173e7bdc8038c4d413f458140d8f42f1a2f098f67a887c2388eff31718"
+    },
+    {
+      "path": "source/official/assets/foot_left.stl",
+      "size": 996184,
+      "sha256": "a1f5d43456d0f522bd60870153795f1e8112c1adf9b8b4373b59608d9545c044"
+    },
+    {
+      "path": "source/official/assets/foot_right.stl",
+      "size": 997684,
+      "sha256": "54f97fa1f0e0e611d31329df9f3c3b17ffcca2d695c579d1d32cbe99e8a6c7ef"
+    },
+    {
+      "path": "source/official/assets/hip_l.stl",
+      "size": 1048584,
+      "sha256": "e175896932d76dc7648cf939aa39cb7b1d188b783d91745adb9a4cec65e9052c"
+    },
+    {
+      "path": "source/official/assets/jaw.stl",
+      "size": 495984,
+      "sha256": "45cdbd319a4583095d8daa0db07dee726522a743d59acb82d27d82ded500a1cf"
+    },
+    {
+      "path": "source/official/assets/jaw_soft.stl",
+      "size": 336384,
+      "sha256": "2d2ade4e86df4b37ce313bb9b96023109dd04bab39dba08b154e76d332fbce2e"
+    },
+    {
+      "path": "source/official/assets/left_shell.stl",
+      "size": 1048584,
+      "sha256": "2abde8e2b79c9b011cdb11957c67ab4287b45d7301affd4235ab81141118e331"
+    },
+    {
+      "path": "source/official/assets/leg.stl",
+      "size": 738884,
+      "sha256": "9a91cc1ae31ecd9e0c1ba93f3bb2ad8a12e29bff24ec27d1ac66c0c3037d9fcf"
+    },
+    {
+      "path": "source/official/assets/lens.stl",
+      "size": 93684,
+      "sha256": "b1c717432ff7666398de58adec6a1b7e03a7e45aa155dbfe27a6152ef19663e5"
+    },
+    {
+      "path": "source/official/assets/m12_lens_holder.stl",
+      "size": 549684,
+      "sha256": "031d5ffaf6247328cf6d020f6b6695ffb3f8d3f22cf923b85811351d89ecfd7c"
+    },
+    {
+      "path": "source/official/assets/motor_support.stl",
+      "size": 180884,
+      "sha256": "ce0aa5bef82c7474512d302568c341b9769b3005e0bdb91a19c2eaaba6dad480"
+    },
+    {
+      "path": "source/official/assets/neck.stl",
+      "size": 73484,
+      "sha256": "b6e86b886153be8a8a776c1cb219c074ee9e89c8bd431117662a2d9e504d7cb5"
+    },
+    {
+      "path": "source/official/assets/neck_pitch.stl",
+      "size": 356084,
+      "sha256": "a685ce65348ae4d0d49417c69a7a8871f8bbd54a6e3419362be9c334abd5d2ae"
+    },
+    {
+      "path": "source/official/assets/noenoeil.stl",
+      "size": 49284,
+      "sha256": "e1167b3d5ad7fbbe6e63296bcd0c6b61556611e6bc1367b15ecfd27e3abb72f5"
+    },
+    {
+      "path": "source/official/assets/np_f970.stl",
+      "size": 1048584,
+      "sha256": "0e55a48281331b3b7b1a363d2e93b6012f37c52045b6dc922a149ca7c1b38388"
+    },
+    {
+      "path": "source/official/assets/pcb__raspberry_pi_zero_2_w.stl",
+      "size": 1048584,
+      "sha256": "802cc66fc5447c67fc642d1339e55160df10f2ad04a65efd130e35fb7b2d3c90"
+    },
+    {
+      "path": "source/official/assets/power_support.stl",
+      "size": 641684,
+      "sha256": "ee45e397d3f3422f34940a4b61156c3c11c7e8c2b240451ce5f9ddd1622a130e"
+    },
+    {
+      "path": "source/official/assets/right_shell.stl",
+      "size": 1048584,
+      "sha256": "3efba3e193cc6aa49d49a9c92cdded0504917397c9e2c5b8fe002a958e2f2d2b"
+    },
+    {
+      "path": "source/official/assets/seeed_bearing__configuration__22x16x4.stl",
+      "size": 1048584,
+      "sha256": "295ee68ed9766c91fe06d3a2a49d39f7c2f56cc943395d293afdeb013123435e"
+    },
+    {
+      "path": "source/official/assets/seeed_bearing__configuration_default.stl",
+      "size": 1048584,
+      "sha256": "e815f3483a2e7b80844f3c0938a47e53db38b12faed9b2d364414c19e4322da4"
+    },
+    {
+      "path": "source/official/assets/soft_mouth_top.stl",
+      "size": 393584,
+      "sha256": "3c2b52b0b6e2ce944a1e1b5a0838e1216be1ad3a34c8cdf91be186e634aec57b"
+    },
+    {
+      "path": "source/official/assets/sole_left.stl",
+      "size": 789484,
+      "sha256": "e028c8b09fecd4cb354d042bf7fd95a1a1bc2d524d760d62137fa8d74093fc23"
+    },
+    {
+      "path": "source/official/assets/sole_right.stl",
+      "size": 795184,
+      "sha256": "3f5068872f3add10eb967327651445bdfca635f5a8a01befa0ef05e462b72b4c"
+    },
+    {
+      "path": "source/official/assets/speaker.stl",
+      "size": 684,
+      "sha256": "75a35f9bcf94cd8e52f99b3fd6ae667b48f52503f9075ee2f699eebe8e7b3ddf"
+    },
+    {
+      "path": "source/official/assets/top_head_shell.stl",
+      "size": 806084,
+      "sha256": "6d01f396f514c9d2185cf6b8250b1d8382ac3fa0702eb525bcb284f706196291"
+    },
+    {
+      "path": "source/official/assets/trunk_base.stl",
+      "size": 184984,
+      "sha256": "aa4f853ae555a8b765e585ce4519c0bbff325ce298ec15a1437792c52a0beac1"
+    },
+    {
+      "path": "source/official/assets/upper_leg_left.stl",
+      "size": 612584,
+      "sha256": "8cb1c12dfa6d366a318bb1ec16f585427b9a185afeb7738d0a6f41f5db46a07d"
+    },
+    {
+      "path": "source/official/assets/upper_leg_right.stl",
+      "size": 612584,
+      "sha256": "5caf996cc3e151b01f393cdc6a6a6a940c1d86179d8b7c7f5f85cf1f1ac2fb63"
+    },
+    {
+      "path": "source/official/assets/upper_leg_rigidity_plate.stl",
+      "size": 180084,
+      "sha256": "231b3e5f1e24d146d735dc158cbcfec0c95a0d0ca8c500f61f04d15d0b665652"
+    },
+    {
+      "path": "source/official/assets/xl330.stl",
+      "size": 206384,
+      "sha256": "96238ed0d020ce0009cf1a5aa4b6926176c800840318ee65e4375be2298d2744"
+    },
+    {
+      "path": "source/official/assets/yaw2roll.stl",
+      "size": 620284,
+      "sha256": "6c8f193ec7cb40be0f48eeb5fba81bce2c87f12e1aab3f77f1bc4981386e1495"
+    },
+    {
+      "path": "source/official/assets/yaw_roll_motion.stl",
+      "size": 290784,
+      "sha256": "b0c9902dee19f06cdb7fa930292e0e1c91e2dc59baa971211495b58ff76c3c60"
+    },
+    {
+      "path": "source/official/joint-reference.json",
+      "size": 40521,
+      "sha256": "93a1d7e23acbdfa67a5345051e9af383f356ddae7faa880b1230481b084a7f9e"
+    },
+    {
+      "path": "source/official/LICENSE",
+      "size": 11351,
+      "sha256": "2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe"
+    },
+    {
+      "path": "source/official/LICENSE-MODELS.md",
+      "size": 1148,
+      "sha256": "51526767ce31785f88f318ede4870f4b0d466267c79ce6fb9009c682f798da30"
+    },
+    {
+      "path": "source/official/motor-frame-report.json",
+      "size": 30690,
+      "sha256": "4372429d2da25b5d6587109c792f448d4d6115a421d32158037936c4eb44387f"
+    },
+    {
+      "path": "source/official/reference-stand-scene.json",
+      "size": 10638722,
+      "sha256": "60f6bd694b7bb878646306324194e940e66aab88cf9c0b45d3705ec3c3f14c1f"
+    },
+    {
+      "path": "source/official/source-manifest.json",
+      "size": 14938,
+      "sha256": "38748563f30c1c254fc74beb9cfea9df8b35bf2d123f4bdb4d55f7451c10b8b4"
+    },
+    {
+      "path": "viewer-template.html",
+      "size": 22326,
+      "sha256": "acc931d05ef3fbfdd6f27b4710b38f5ebf158916639d09c9bf45892c520d579a"
+    }
+  ]
+}

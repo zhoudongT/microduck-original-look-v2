@@ -1,0 +1,412 @@
+<div id="microduck-budget-viewer-v2">
+  <div class="duck-toolbar"><div class="viz-controls" role="group" aria-label="装配视图">
+    <button class="btn" type="button" data-duck-view="assembled" aria-pressed="true" disabled>原版外观</button>
+    <button class="btn" type="button" data-duck-view="internal" aria-pressed="false" disabled>拆壳布局</button>
+    <button class="btn" type="button" data-duck-view="exploded" aria-pressed="false" disabled>分件查看</button>
+    <button class="btn" type="button" data-duck-view="joint" aria-pressed="false" disabled>新舵机夹座</button>
+  </div></div>
+  <div class="duck-explosion" hidden>
+    <div class="duck-explosion-labels">
+      <label class="form-label" for="duck-explosion-v2">展开距离</label>
+      <output class="text-small tabular-nums" for="duck-explosion-v2">50%</output>
+    </div>
+    <input class="form-range" id="duck-explosion-v2" type="range" min="0" max="100" step="1" value="50" aria-label="爆炸展开距离" disabled>
+  </div>
+  <div class="duck-stage" aria-busy="true">
+    <div class="duck-loading" role="status" aria-live="polite">正在读取装配数据…</div>
+    <span class="duck-theme-border" aria-hidden="true"></span>
+    <span class="duck-theme-highlight" aria-hidden="true"></span>
+    <span class="duck-theme-foreground" aria-hidden="true"></span>
+  </div>
+  <div class="duck-detail text-small" aria-live="polite">尚未选择零件</div>
+  <div class="duck-caption text-small text-muted">拖动旋转 · 滚轮或双指缩放 · 点选零件</div>
+  <footer class="text-small text-muted">外观比例 2× · 舵机原尺寸 · 安装接口待适配<br>外形：<a href="https://github.com/pollen-robotics/microduck_rl">Pollen Robotics</a> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>（已缩放及简化）</footer>
+</div>
+<style>
+  #microduck-budget-viewer-v2 { width:100%; min-width:0; color:var(--foreground); font-family:"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif; }
+  #microduck-budget-viewer-v2 .duck-toolbar { padding-inline-end:94px; }
+  #microduck-budget-viewer-v2 .duck-stage { position:relative; width:100%; height:clamp(380px,65vw,520px); margin-block:8px; }
+  #microduck-budget-viewer-v2 .duck-stage canvas { display:block; width:100%; height:100%; touch-action:none; }
+  #microduck-budget-viewer-v2 .duck-loading { position:absolute; inset:0; display:grid; place-content:center; padding:24px; text-align:center; color:var(--muted-foreground); }
+  #microduck-budget-viewer-v2 .duck-loading[hidden], #microduck-budget-viewer-v2 .duck-explosion[hidden] { display:none; }
+  #microduck-budget-viewer-v2 .duck-explosion { margin-block-start:12px; max-width:360px; }
+  #microduck-budget-viewer-v2 .duck-explosion-labels { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  #microduck-budget-viewer-v2 .duck-detail { min-height:1.5em; overflow-wrap:anywhere; }
+  #microduck-budget-viewer-v2 .duck-caption { margin-block:4px 10px; }
+  #microduck-budget-viewer-v2 footer { margin-block-start:8px; }
+  #microduck-budget-viewer-v2 .duck-theme-border,
+  #microduck-budget-viewer-v2 .duck-theme-highlight,
+  #microduck-budget-viewer-v2 .duck-theme-foreground { position:absolute; visibility:hidden; pointer-events:none; }
+  #microduck-budget-viewer-v2 .duck-theme-border { color:var(--border,currentColor); }
+  #microduck-budget-viewer-v2 .duck-theme-highlight { color:var(--viz-series-1,var(--primary,currentColor)); }
+  #microduck-budget-viewer-v2 .duck-theme-foreground { color:var(--muted-foreground,currentColor); }
+  @media(max-width:420px) { #microduck-budget-viewer-v2 .duck-toolbar { padding-inline-end:0; } }
+</style>
+<script type="application/json" id="microduck-model-data-v2">__MODEL_DATA__</script>
+<script>
+(async function () {
+  const root = document.getElementById('microduck-budget-viewer-v2');
+  if (!root || root.dataset.started === 'true') return;
+  root.dataset.started = 'true';
+  const stage = root.querySelector('.duck-stage');
+  const loading = root.querySelector('.duck-loading');
+  const detail = root.querySelector('.duck-detail');
+  const buttons = [...root.querySelectorAll('[data-duck-view]')];
+  const explosionRow = root.querySelector('.duck-explosion');
+  const slider = root.querySelector('#duck-explosion-v2');
+  const output = root.querySelector('output');
+  const viewLabels = {assembled:'原版外观',internal:'拆壳布局',exploded:'分件查看',joint:'新舵机夹座'};
+  let state = {view:'assembled',explode:0.5,selectedName:''};
+  let renderer, controls, resizeObserver, themeObserver, grid, selection;
+  let disposed = false;
+  let ready = false;
+  let pendingFrame = 0;
+  let errorMessage = '';
+  const meshes = [];
+  const geometries = new Map();
+  const materials = [];
+  const safe = n => typeof n === 'number' && Number.isFinite(n);
+  const cleanState = snapshot => {
+    const value = snapshot?.privateContent?.microduckV2 || snapshot?.modelContent?.microduckV2 || snapshot?.microduckV2 || {};
+    return {
+      view:Object.prototype.hasOwnProperty.call(viewLabels,value.view) ? value.view : 'assembled',
+      explode:safe(value.explode) ? Math.min(1,Math.max(0,value.explode)) : 0.5,
+      selectedName:typeof value.selectedName === 'string' ? value.selectedName : '',
+      camera:Array.isArray(value.camera) && value.camera.length === 3 && value.camera.every(safe) ? value.camera : null,
+      target:Array.isArray(value.target) && value.target.length === 3 && value.target.every(safe) ? value.target : null
+    };
+  };
+  state = cleanState(window.openai?.widgetState);
+  function fail(message) {
+    errorMessage = message;
+    loading.hidden = false;
+    loading.textContent = message;
+    loading.setAttribute('role','alert');
+    stage.setAttribute('aria-busy','false');
+    buttons.forEach(button => button.disabled = true);
+    slider.disabled = true;
+    detail.textContent = '三维预览未就绪';
+  }
+  try {
+    let data;
+    try { data = JSON.parse(document.getElementById('microduck-model-data-v2').textContent); }
+    catch (_) { throw new Error('模型数据尚未填入；请完成装配数据后打开预览。'); }
+    if (data && typeof data.gzip === 'string') {
+      loading.textContent = '正在解压装配数据…';
+      if (typeof DecompressionStream !== 'function') {
+        throw new Error('此浏览器不支持压缩模型解包；请使用新版Chrome或Edge，或查看装配图片。');
+      }
+      try {
+        const packed = Uint8Array.from(atob(data.gzip),character => character.charCodeAt(0));
+        const stream = new Blob([packed]).stream().pipeThrough(new DecompressionStream('gzip'));
+        const reader = stream.getReader();
+        const decoder = new TextDecoder('utf-8',{fatal:true});
+        let decoded = '';
+        while (true) {
+          const {value,done} = await reader.read();
+          if (done) break;
+          decoded += decoder.decode(value,{stream:true});
+        }
+        decoded += decoder.decode();
+        data = JSON.parse(decoded);
+      } catch (_) { throw new Error('压缩模型数据损坏或格式无效；请重新生成预览。'); }
+    }
+    if (!data || !data.geometries || !Array.isArray(data.instances) || !data.instances.length) {
+      throw new Error('装配数据为空，当前没有可显示的零件。');
+    }
+    loading.textContent = '正在加载三维组件…';
+    for (const raw of Object.values(data.geometries)) {
+      if (typeof raw.v16 === 'string' && typeof raw.i16 === 'string') {
+        const decode16 = (value,signed) => {
+          const bytes=Uint8Array.from(atob(value),character=>character.charCodeAt(0));
+          if(bytes.length%2)throw new Error('网格二进制长度无效');
+          const view=new DataView(bytes.buffer);
+          return Array.from({length:bytes.length/2},(_,i)=>signed?view.getInt16(i*2,true)/100:view.getUint16(i*2,true));
+        };
+        raw.v=decode16(raw.v16,true);raw.i=decode16(raw.i16,false);
+      }
+    }
+    let THREE, OrbitControls;
+    try {
+      [THREE,{OrbitControls}] = await Promise.all([
+        import('https://esm.sh/three@0.160.0'),
+        import('https://esm.sh/three@0.160.0/examples/jsm/controls/OrbitControls.js')
+      ]);
+    } catch (_) { throw new Error('三维组件加载失败；请联网后重新打开，或查看交付包内的装配图片。'); }
+    if (disposed) return;
+    const scene = new THREE.Scene();
+    const model = new THREE.Group();
+    scene.add(model);
+    const camera = new THREE.PerspectiveCamera(35,1,0.1,100000);
+    camera.up.set(0,0,1);
+    try { renderer = new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'low-power'}); }
+    catch (_) { throw new Error('此环境无法启用WebGL；请查看交付包内的装配图片。'); }
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1,2));
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.15;
+    renderer.setClearColor(0,0);
+    renderer.domElement.setAttribute('role','img');
+    renderer.domElement.setAttribute('aria-label','Microduck参数化三维装配；可旋转、缩放和点选零件。此视图不模拟步态。');
+    stage.prepend(renderer.domElement);
+    controls = new OrbitControls(camera,renderer.domElement);
+    controls.enableDamping = false;
+    controls.enablePan = true;
+    controls.screenSpacePanning = true;
+    controls.minPolarAngle = 0.04;
+    controls.maxPolarAngle = Math.PI - 0.04;
+    controls.addEventListener('change',requestRender);
+    controls.addEventListener('end',saveState);
+    scene.add(new THREE.HemisphereLight(0xffffff,0xc6c8cd,2.0));
+    const key = new THREE.DirectionalLight(0xffffff,3.0);
+    key.position.set(450,-550,800); scene.add(key);
+    const fill = new THREE.DirectionalLight(0xffffff,1.2);
+    fill.position.set(-500,350,250); scene.add(fill);
+    for (const [id,raw] of Object.entries(data.geometries)) {
+      if (!Array.isArray(raw.v) || raw.v.length < 9 || raw.v.length % 3 || !raw.v.every(safe) ||
+          !Array.isArray(raw.i) || !raw.i.length || raw.i.length % 3 ||
+          !raw.i.every(i => Number.isInteger(i) && i >= 0 && i < raw.v.length / 3)) {
+        throw new Error('零件网格数据无效：'+id);
+      }
+      const geometry = new THREE.BufferGeometry();
+      geometry.setAttribute('position',new THREE.Float32BufferAttribute(raw.v,3));
+      geometry.setIndex(raw.i);
+      geometry.computeVertexNormals();
+      geometry.computeBoundingBox();
+      geometries.set(id,geometry);
+    }
+    for (const item of data.instances) {
+      if (!geometries.has(item.geometry) || !Array.isArray(item.matrix) || item.matrix.length !== 16 || !item.matrix.every(safe)) {
+        throw new Error('零件变换或网格引用无效：'+(item.name || '未命名'));
+      }
+      const material = new THREE.MeshStandardMaterial({
+        color:item.color ?? 0x969ba6,
+        metalness:item.category === 'hardware' ? 0.55 : 0.08,
+        roughness:item.category === 'hardware' ? 0.34 : 0.72,
+        side:THREE.DoubleSide
+      });
+      materials.push(material);
+      const mesh = new THREE.Mesh(geometries.get(item.geometry),material);
+      mesh.name = String(item.name || item.geometry);
+      mesh.matrixAutoUpdate = false;
+      mesh.matrix.fromArray(item.matrix);
+      mesh.userData = {
+        category:item.category,group:item.group,
+        base:mesh.matrix.clone(),
+        explode:Array.isArray(item.explode) && item.explode.length === 3 && item.explode.every(safe) ? item.explode : [0,0,0]
+      };
+      meshes.push(mesh); model.add(mesh);
+    }
+    model.updateMatrixWorld(true);
+    const assembledBox = bounds();
+    const fullSize = assembledBox.getSize(new THREE.Vector3());
+    const gridSpan = Math.max(200,Math.ceil(Math.max(fullSize.x,fullSize.y) / 50) * 100);
+    grid = new THREE.GridHelper(gridSpan,10);
+    grid.rotation.x = Math.PI / 2;
+    const assembledCenter = assembledBox.getCenter(new THREE.Vector3());
+    grid.position.set(assembledCenter.x,assembledCenter.y,assembledBox.min.z-0.5);
+    grid.material.transparent = true;
+    grid.material.opacity = 0.22;
+    scene.add(grid);
+    const raycaster = new THREE.Raycaster();
+    const pointer = new THREE.Vector2();
+    let pointerDown = null;
+    renderer.domElement.addEventListener('pointerdown',event => {
+      pointerDown = event.isPrimary ? {x:event.clientX,y:event.clientY,id:event.pointerId} : null;
+    });
+    renderer.domElement.addEventListener('pointercancel',() => { pointerDown = null; });
+    renderer.domElement.addEventListener('pointerup',event => {
+      if (!pointerDown || pointerDown.id !== event.pointerId || Math.hypot(event.clientX-pointerDown.x,event.clientY-pointerDown.y) > 6) return;
+      pointerDown = null;
+      const rect = renderer.domElement.getBoundingClientRect();
+      pointer.set((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1);
+      raycaster.setFromCamera(pointer,camera);
+      const hit = raycaster.intersectObjects(meshes.filter(mesh => mesh.visible),false)[0];
+      state.selectedName = hit ? hit.object.name : '';
+      selectPart(state.selectedName); saveState();
+    });
+    renderer.domElement.addEventListener('webglcontextlost',event => {
+      event.preventDefault(); fail('三维绘图连接已中断；请重新打开预览，或查看装配图片。');
+    });
+    buttons.forEach(button => {
+      button.disabled = false;
+      button.addEventListener('click',() => {
+        state.view = button.dataset.duckView;
+        applyView(true); saveState();
+      });
+    });
+    slider.disabled = false;
+    slider.addEventListener('input',() => {
+      state.explode = Number(slider.value)/100;
+      applyPositions(state.explode); updateControls(); requestRender();
+    });
+    slider.addEventListener('change',saveState);
+    const colorCanvas = document.createElement('canvas');
+    colorCanvas.width = colorCanvas.height = 1;
+    const colorContext = colorCanvas.getContext('2d',{willReadFrequently:true});
+    function colorFrom(className) {
+      const cssColor = getComputedStyle(root.querySelector(className)).color;
+      if (!colorContext) return new THREE.Color(cssColor);
+      colorContext.clearRect(0,0,1,1);
+      colorContext.fillStyle = cssColor;
+      colorContext.fillRect(0,0,1,1);
+      const rgb = colorContext.getImageData(0,0,1,1).data;
+      return new THREE.Color().setRGB(rgb[0]/255,rgb[1]/255,rgb[2]/255,THREE.SRGBColorSpace);
+    }
+    function syncTheme() {
+      if (disposed || !grid) return;
+      const color = colorFrom('.duck-theme-border');
+      const attribute = grid.geometry.getAttribute('color');
+      for (let i=0;i<attribute.count;i++) attribute.setXYZ(i,color.r,color.g,color.b);
+      attribute.needsUpdate = true;
+      if (selection) selection.material.color.copy(colorFrom('.duck-theme-highlight'));
+      requestRender();
+    }
+    function bounds() {
+      model.updateMatrixWorld(true);
+      const box = new THREE.Box3();
+      for (const mesh of meshes) {
+        if (mesh.visible) box.union(mesh.geometry.boundingBox.clone().applyMatrix4(mesh.matrixWorld));
+      }
+      return box;
+    }
+    function fitCamera() {
+      const box = bounds();
+      if (box.isEmpty()) return false;
+      const sphere = box.getBoundingSphere(new THREE.Sphere());
+      const radius = Math.max(sphere.radius,1);
+      const vertical = THREE.MathUtils.degToRad(camera.fov);
+      const horizontal = 2*Math.atan(Math.tan(vertical/2)*camera.aspect);
+      const distance = radius/Math.sin(Math.min(vertical,horizontal)/2)*1.12;
+      const direction = new THREE.Vector3(1.05,-1.5,0.78).normalize();
+      camera.position.copy(sphere.center).addScaledVector(direction,distance);
+      controls.target.copy(sphere.center);
+      controls.minDistance = radius*0.15;
+      controls.maxDistance = distance*5;
+      camera.near = Math.max(0.05,radius/1000);
+      camera.far = Math.max(5000,distance*15);
+      camera.updateProjectionMatrix(); controls.update();
+      return true;
+    }
+    function applyPositions(amount) {
+      for (const mesh of meshes) {
+        mesh.matrix.copy(mesh.userData.base);
+        if (state.view === 'exploded') {
+          const v = mesh.userData.explode;
+          mesh.matrix.elements[12] += v[0]*amount;
+          mesh.matrix.elements[13] += v[1]*amount;
+          mesh.matrix.elements[14] += v[2]*amount;
+        }
+        mesh.matrixWorldNeedsUpdate = true;
+      }
+      model.updateMatrixWorld(true);
+    }
+    function updateControls() {
+      buttons.forEach(button => button.setAttribute('aria-pressed',String(button.dataset.duckView === state.view)));
+      explosionRow.hidden = state.view !== 'exploded';
+      slider.value = String(Math.round(state.explode*100));
+      output.value = slider.value+'%';
+      output.textContent = slider.value+'%';
+    }
+    function applyView(reframe) {
+      for (const mesh of meshes) {
+        mesh.visible = state.view === 'joint' ? mesh.name.startsWith('J_L_ANKLE') : state.view !== 'internal' || mesh.userData.category !== 'shell';
+      }
+      grid.visible = state.view !== 'joint';
+      applyPositions(reframe && state.view === 'exploded' ? 1 : state.explode);
+      if (reframe) fitCamera();
+      applyPositions(state.explode);
+      const visible = meshes.filter(mesh => mesh.visible);
+      if (!visible.length) {
+        loading.textContent = state.view === 'joint' ? '数据中没有J_L_ANKLE前缀的夹座零件。' : '当前视图没有可显示的零件。';
+        loading.hidden = false;
+      } else loading.hidden = true;
+      updateControls(); selectPart(state.selectedName); requestRender();
+    }
+    function selectPart(name) {
+      if (selection) {
+        selection.removeFromParent(); selection.geometry.dispose(); selection.material.dispose(); selection = null;
+      }
+      const mesh = meshes.find(item => item.name === name && item.visible);
+      if (mesh) {
+        selection = new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry,28),new THREE.LineBasicMaterial({
+          color:colorFrom('.duck-theme-highlight'),depthTest:false,transparent:true,opacity:0.9
+        }));
+        selection.renderOrder = 20;
+        mesh.add(selection);
+        detail.textContent = '已选：'+mesh.name;
+      } else {
+        state.selectedName = '';
+        detail.textContent = viewLabels[state.view]+' · '+meshes.filter(item => item.visible).length+'件 · 尚未选择零件';
+      }
+      requestRender();
+    }
+    function requestRender() {
+      if (pendingFrame || disposed || !renderer) return;
+      pendingFrame = requestAnimationFrame(() => {
+        pendingFrame = 0;
+        if (!disposed && !errorMessage) renderer.render(scene,camera);
+      });
+    }
+    function saveState() {
+      if (!ready || disposed || typeof window.openai?.setWidgetState !== 'function') return;
+      try {
+        Promise.resolve(window.openai.setWidgetState({
+          modelContent:{microduckV2:{view:state.view,explode:state.explode,selectedName:state.selectedName}},
+          privateContent:{microduckV2:{view:state.view,explode:state.explode,selectedName:state.selectedName,camera:camera.position.toArray(),target:controls.target.toArray()}}
+        })).catch(() => {});
+      } catch (_) {}
+    }
+    let initialSize = true;
+    function resize() {
+      if (disposed) return;
+      const width = Math.max(1,stage.clientWidth), height = Math.max(1,stage.clientHeight);
+      renderer.setSize(width,height,false);
+      camera.aspect = width/height;
+      camera.updateProjectionMatrix();
+      if (initialSize) {
+        applyView(true);
+        if (state.camera && state.target) {
+          camera.position.fromArray(state.camera); controls.target.fromArray(state.target); controls.update();
+        }
+        initialSize = false;
+      } else {
+        applyPositions(state.view === 'exploded' ? 1 : state.explode);
+        fitCamera(); applyPositions(state.explode);
+      }
+      requestRender();
+    }
+    resizeObserver = new ResizeObserver(resize); resizeObserver.observe(stage);
+    themeObserver = new MutationObserver(syncTheme);
+    themeObserver.observe(document.documentElement,{attributes:true,attributeFilter:['class','style','data-theme']});
+    if (document.body) themeObserver.observe(document.body,{attributes:true,attributeFilter:['class','style','data-theme']});
+    const appearance = matchMedia('(prefers-color-scheme: dark)');
+    appearance.addEventListener('change',syncTheme);
+    const restore = event => {
+      if (!event.detail?.globals || !Object.prototype.hasOwnProperty.call(event.detail.globals,'widgetState')) return;
+      state = cleanState(event.detail.globals.widgetState);
+      applyView(true);
+      if (state.camera && state.target) {
+        camera.position.fromArray(state.camera); controls.target.fromArray(state.target); controls.update();
+      }
+    };
+    window.addEventListener('openai:set_globals',restore);
+    window.addEventListener('pagehide',() => {
+      disposed = true; cancelAnimationFrame(pendingFrame);
+      resizeObserver.disconnect(); themeObserver.disconnect();
+      appearance.removeEventListener('change',syncTheme);
+      window.removeEventListener('openai:set_globals',restore);
+      controls.dispose();
+      if (selection) { selection.geometry.dispose(); selection.material.dispose(); }
+      geometries.forEach(geometry => geometry.dispose()); materials.forEach(material => material.dispose());
+      grid.geometry.dispose(); grid.material.dispose(); renderer.dispose();
+    },{once:true});
+    resize(); syncTheme();
+    ready = true;
+    stage.setAttribute('aria-busy','false');
+  } catch (error) {
+    if (renderer) renderer.domElement.hidden = true;
+    fail(error instanceof Error ? error.message : '三维预览未能初始化；请查看装配图片。');
+  }
+})();
+</script>

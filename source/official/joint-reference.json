@@ -1,0 +1,1782 @@
+{
+  "coordinate_convention": "world +X forward, +Y left, +Z up; millimetres. STL source local frames differ by mesh.",
+  "xl330_local_bbox_mm": [
+    [
+      -14.5,
+      -10.0,
+      -24.5
+    ],
+    [
+      14.5,
+      10.0,
+      9.5
+    ]
+  ],
+  "xl330_axis_convention": "output rotation line is local X through local y=0,z=0; motor body extends z=-24.5..9.5 mm",
+  "poses": {
+    "zero": {
+      "joint_order": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "joints": [
+        {
+          "name": "left_hip_yaw",
+          "moving_body": "yaw2roll",
+          "world_origin_mm": [
+            6.0,
+            17.5,
+            115.0
+          ],
+          "world_axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "range_radians": [
+            -0.4363323129985824,
+            0.5235987755982988
+          ],
+          "angle_radians": 0
+        },
+        {
+          "name": "left_hip_roll",
+          "moving_body": "hip_l",
+          "world_origin_mm": [
+            22.5,
+            17.5,
+            102.5
+          ],
+          "world_axis": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "range_radians": [
+            -0.3839724354386992,
+            0.38397243543880577
+          ],
+          "angle_radians": 0
+        },
+        {
+          "name": "left_hip_pitch",
+          "moving_body": "upper_leg_left",
+          "world_origin_mm": [
+            4.0,
+            42.5,
+            102.5
+          ],
+          "world_axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "range_radians": [
+            -1.570796326794949,
+            1.5707963267948442
+          ],
+          "angle_radians": 0
+        },
+        {
+          "name": "left_knee",
+          "moving_body": "leg",
+          "world_origin_mm": [
+            -31.7771,
+            38.5,
+            80.5
+          ],
+          "world_axis": [
+            -0.0,
+            -1.0,
+            0.0
+          ],
+          "range_radians": [
+            -1.5707963267948983,
+            1.5707963267948948
+          ],
+          "angle_radians": 0
+        },
+        {
+          "name": "left_ankle",
+          "moving_body": "ankle_left",
+          "world_origin_mm": [
+            -31.7771,
+            64.5,
+            38.5
+          ],
+          "world_axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "range_radians": [
+            -1.5707963267949063,
+            1.5707963267948868
+          ],
+          "angle_radians": 0
+        },
+        {
+          "name": "neck_pitch",
+          "moving_body": "neck",
+          "world_origin_mm": [
+            26.0,
+            14.5,
+            152.4215
+          ],
+          "world_axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "range_radians": [
+            -1.5707963267948974,
+            1.0471975511965967
+          ],
+          "angle_radians": 0
+        },
+        {
+          "name": "head_pitch",
+          "moving_body": "neck_pitch",
+          "world_origin_mm": [
+            26.0,
+            14.5,
+            202.4215
+          ],
+          "world_axis": [
+            0.0,
+            1.0,
+            -0.0
+          ],
+          "range_radians": [
+            -1.5707963267948966,
+            1.5707963267948966
+          ],
+          "angle_radians": 0
+        },
+        {
+          "name": "head_yaw",
+          "moving_body": "yaw_roll_motion",
+          "world_origin_mm": [
+            26.0,
+            -0.0,
+            221.1146
+          ],
+          "world_axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "range_radians": [
+            -2.9670597283903613,
+            2.9670597283903595
+          ],
+          "angle_radians": 0
+        },
+        {
+          "name": "head_roll",
+          "moving_body": "jaw_soft",
+          "world_origin_mm": [
+            8.1,
+            -0.0,
+            235.6146
+          ],
+          "world_axis": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "range_radians": [
+            -0.43633231299858327,
+            0.4363323129985815
+          ],
+          "angle_radians": 0
+        },
+        {
+          "name": "right_hip_yaw",
+          "moving_body": "bearing_roll",
+          "world_origin_mm": [
+            6.0,
+            -17.5,
+            115.0
+          ],
+          "world_axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "range_radians": [
+            -0.523598775598297,
+            0.43633231299858416
+          ],
+          "angle_radians": 0
+        },
+        {
+          "name": "right_hip_roll",
+          "moving_body": "hip_l_2",
+          "world_origin_mm": [
+            22.5,
+            -17.5,
+            102.5
+          ],
+          "world_axis": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "range_radians": [
+            -0.3839724354387507,
+            0.38397243543875426
+          ],
+          "angle_radians": 0
+        },
+        {
+          "name": "right_hip_pitch",
+          "moving_body": "upper_leg_right",
+          "world_origin_mm": [
+            4.0,
+            -42.5,
+            102.5
+          ],
+          "world_axis": [
+            -0.0,
+            -1.0,
+            0.0
+          ],
+          "range_radians": [
+            -1.57079632679494,
+            1.570796326794853
+          ],
+          "angle_radians": 0
+        },
+        {
+          "name": "right_knee",
+          "moving_body": "leg_2",
+          "world_origin_mm": [
+            -31.7771,
+            -38.5,
+            80.5
+          ],
+          "world_axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "range_radians": [
+            -1.5707963267949339,
+            1.5707963267948593
+          ],
+          "angle_radians": 0
+        },
+        {
+          "name": "right_ankle",
+          "moving_body": "ankle_right",
+          "world_origin_mm": [
+            -31.7771,
+            -64.5,
+            38.5
+          ],
+          "world_axis": [
+            -0.0,
+            -1.0,
+            0.0
+          ],
+          "range_radians": [
+            -1.5707963267949028,
+            1.5707963267948903
+          ],
+          "angle_radians": 0
+        }
+      ],
+      "servos": [
+        {
+          "instance": "trunk_base__xl330__4",
+          "matrix_mm_column_major": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            6.0,
+            17.5,
+            131.5,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "output_line_origin_world_mm": [
+            6.0,
+            17.5,
+            131.5
+          ],
+          "matches": [
+            {
+              "joint": "left_hip_yaw",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "trunk_base__xl330__7",
+          "matrix_mm_column_major": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            6.0,
+            -17.5,
+            131.5,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "output_line_origin_world_mm": [
+            6.0,
+            -17.5,
+            131.5
+          ],
+          "matches": [
+            {
+              "joint": "right_hip_yaw",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "yaw2roll__xl330__11",
+          "matrix_mm_column_major": [
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            6.0,
+            17.5,
+            102.5,
+            1.0
+          ],
+          "output_axis_world": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            6.0,
+            17.5,
+            102.5
+          ],
+          "matches": [
+            {
+              "joint": "left_hip_roll",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "upper_leg_left__xl330__17",
+          "matrix_mm_column_major": [
+            0.0,
+            1.0,
+            -0.0,
+            0.0,
+            1.0,
+            0.0,
+            -0.0,
+            0.0,
+            -0.0,
+            0.0,
+            -1.0,
+            0.0,
+            -31.7771,
+            55.0,
+            80.5,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            1.0,
+            -0.0
+          ],
+          "output_line_origin_world_mm": [
+            -31.7771,
+            55.0,
+            80.5
+          ],
+          "matches": [
+            {
+              "joint": "left_knee",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            },
+            {
+              "joint": "right_knee",
+              "axis_sign": 1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "upper_leg_left__xl330__20",
+          "matrix_mm_column_major": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            -0.0,
+            0.0,
+            4.0,
+            55.0,
+            102.5,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            4.0,
+            55.0,
+            102.5
+          ],
+          "matches": [
+            {
+              "joint": "left_hip_pitch",
+              "axis_sign": 1,
+              "line_error_mm": 0.0
+            },
+            {
+              "joint": "right_hip_pitch",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "leg__xl330__22",
+          "matrix_mm_column_major": [
+            -0.0,
+            -1.0,
+            0.0,
+            0.0,
+            -1.0,
+            -0.0,
+            0.0,
+            0.0,
+            -0.0,
+            -0.0,
+            -1.0,
+            0.0,
+            -31.7771,
+            50.0,
+            38.5,
+            1.0
+          ],
+          "output_axis_world": [
+            -0.0,
+            -1.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            -31.7771,
+            50.0,
+            38.5
+          ],
+          "matches": [
+            {
+              "joint": "left_ankle",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            },
+            {
+              "joint": "right_ankle",
+              "axis_sign": 1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "neck__xl330__28",
+          "matrix_mm_column_major": [
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            26.0,
+            0.0,
+            152.4215,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            26.0,
+            0.0,
+            152.4215
+          ],
+          "matches": [
+            {
+              "joint": "neck_pitch",
+              "axis_sign": 1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "neck__xl330__29",
+          "matrix_mm_column_major": [
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0,
+            1.0,
+            0.0,
+            26.0,
+            -0.0,
+            202.4215,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            26.0,
+            -0.0,
+            202.4215
+          ],
+          "matches": [
+            {
+              "joint": "head_pitch",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "yaw_roll_motion__xl330__34",
+          "matrix_mm_column_major": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            26.0,
+            -0.0,
+            235.6146,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "output_line_origin_world_mm": [
+            26.0,
+            -0.0,
+            235.6146
+          ],
+          "matches": [
+            {
+              "joint": "head_yaw",
+              "axis_sign": 1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "jaw_soft__xl330__39",
+          "matrix_mm_column_major": [
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            26.1,
+            25.5,
+            238.6146,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            26.1,
+            25.5,
+            238.6146
+          ],
+          "matches": [],
+          "status": "no actuated joint in MJCF; mouth reference"
+        },
+        {
+          "instance": "jaw_soft__xl330__43",
+          "matrix_mm_column_major": [
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            -6.4,
+            -0.0,
+            235.6146,
+            1.0
+          ],
+          "output_axis_world": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            -6.4,
+            -0.0,
+            235.6146
+          ],
+          "matches": [
+            {
+              "joint": "head_roll",
+              "axis_sign": 1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "bearing_roll__xl330__54",
+          "matrix_mm_column_major": [
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            6.0,
+            -17.5,
+            102.5,
+            1.0
+          ],
+          "output_axis_world": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            6.0,
+            -17.5,
+            102.5
+          ],
+          "matches": [
+            {
+              "joint": "right_hip_roll",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "upper_leg_right__xl330__59",
+          "matrix_mm_column_major": [
+            -0.0,
+            -1.0,
+            0.0,
+            0.0,
+            -1.0,
+            -0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0,
+            -1.0,
+            0.0,
+            -31.7771,
+            -55.0,
+            80.5,
+            1.0
+          ],
+          "output_axis_world": [
+            -0.0,
+            -1.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            -31.7771,
+            -55.0,
+            80.5
+          ],
+          "matches": [
+            {
+              "joint": "left_knee",
+              "axis_sign": 1,
+              "line_error_mm": 0.0
+            },
+            {
+              "joint": "right_knee",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "upper_leg_right__xl330__63",
+          "matrix_mm_column_major": [
+            -0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            1.0,
+            0.0,
+            -0.0,
+            0.0,
+            4.0,
+            -55.0,
+            102.5,
+            1.0
+          ],
+          "output_axis_world": [
+            -0.0,
+            -1.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            4.0,
+            -55.0,
+            102.5
+          ],
+          "matches": [
+            {
+              "joint": "left_hip_pitch",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            },
+            {
+              "joint": "right_hip_pitch",
+              "axis_sign": 1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "leg_2__xl330__64",
+          "matrix_mm_column_major": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            -0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            -31.7771,
+            -50.0,
+            38.5,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            -31.7771,
+            -50.0,
+            38.5
+          ],
+          "matches": [
+            {
+              "joint": "left_ankle",
+              "axis_sign": 1,
+              "line_error_mm": 0.0
+            },
+            {
+              "joint": "right_ankle",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        }
+      ]
+    },
+    "stand": {
+      "joint_order": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "joints": [
+        {
+          "name": "left_hip_yaw",
+          "moving_body": "yaw2roll",
+          "world_origin_mm": [
+            6.0,
+            17.5,
+            115.0
+          ],
+          "world_axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "range_radians": [
+            -0.4363323129985824,
+            0.5235987755982988
+          ],
+          "angle_radians": 0.0
+        },
+        {
+          "name": "left_hip_roll",
+          "moving_body": "hip_l",
+          "world_origin_mm": [
+            22.5,
+            17.5,
+            102.5
+          ],
+          "world_axis": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "range_radians": [
+            -0.3839724354386992,
+            0.38397243543880577
+          ],
+          "angle_radians": -0.08726646259971647
+        },
+        {
+          "name": "left_hip_pitch",
+          "moving_body": "upper_leg_left",
+          "world_origin_mm": [
+            4.0,
+            42.40487,
+            100.32111
+          ],
+          "world_axis": [
+            0.0,
+            0.9961947,
+            -0.08715574
+          ],
+          "range_radians": [
+            -1.570796326794949,
+            1.5707963267948442
+          ],
+          "angle_radians": -0.457924
+        },
+        {
+          "name": "left_knee",
+          "moving_body": "leg",
+          "world_origin_mm": [
+            -18.36515,
+            35.3217,
+            65.25503
+          ],
+          "world_axis": [
+            -0.0,
+            -0.9961947,
+            0.08715574
+          ],
+          "range_radians": [
+            -1.5707963267948983,
+            1.5707963267948948
+          ],
+          "angle_radians": -0.00494
+        },
+        {
+          "name": "left_ankle",
+          "moving_body": "ankle_left",
+          "world_origin_mm": [
+            0.01617,
+            57.93141,
+            25.36859
+          ],
+          "world_axis": [
+            0.0,
+            0.9961947,
+            -0.08715574
+          ],
+          "range_radians": [
+            -1.5707963267949063,
+            1.5707963267948868
+          ],
+          "angle_radians": 0.452984
+        },
+        {
+          "name": "neck_pitch",
+          "moving_body": "neck",
+          "world_origin_mm": [
+            26.0,
+            14.5,
+            152.4215
+          ],
+          "world_axis": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "range_radians": [
+            -1.5707963267948974,
+            1.0471975511965967
+          ],
+          "angle_radians": 0.3490658503988659
+        },
+        {
+          "name": "head_pitch",
+          "moving_body": "neck_pitch",
+          "world_origin_mm": [
+            8.89899,
+            14.5,
+            199.40613
+          ],
+          "world_axis": [
+            0.0,
+            1.0,
+            -0.0
+          ],
+          "range_radians": [
+            -1.5707963267948966,
+            1.5707963267948966
+          ],
+          "angle_radians": 0.3490658503988659
+        },
+        {
+          "name": "head_yaw",
+          "moving_body": "yaw_roll_motion",
+          "world_origin_mm": [
+            8.89899,
+            -0.0,
+            218.09923
+          ],
+          "world_axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "range_radians": [
+            -2.9670597283903613,
+            2.9670597283903595
+          ],
+          "angle_radians": 0.0
+        },
+        {
+          "name": "head_roll",
+          "moving_body": "jaw_soft",
+          "world_origin_mm": [
+            -9.00101,
+            -0.0,
+            232.59923
+          ],
+          "world_axis": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "range_radians": [
+            -0.43633231299858327,
+            0.4363323129985815
+          ],
+          "angle_radians": 0.0
+        },
+        {
+          "name": "right_hip_yaw",
+          "moving_body": "bearing_roll",
+          "world_origin_mm": [
+            6.0,
+            -17.5,
+            115.0
+          ],
+          "world_axis": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "range_radians": [
+            -0.523598775598297,
+            0.43633231299858416
+          ],
+          "angle_radians": 0.0
+        },
+        {
+          "name": "right_hip_roll",
+          "moving_body": "hip_l_2",
+          "world_origin_mm": [
+            22.5,
+            -17.5,
+            102.5
+          ],
+          "world_axis": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "range_radians": [
+            -0.3839724354387507,
+            0.38397243543875426
+          ],
+          "angle_radians": 0.08726646259971647
+        },
+        {
+          "name": "right_hip_pitch",
+          "moving_body": "upper_leg_right",
+          "world_origin_mm": [
+            4.0,
+            -42.40487,
+            100.32111
+          ],
+          "world_axis": [
+            -0.0,
+            -0.9961947,
+            -0.08715574
+          ],
+          "range_radians": [
+            -1.57079632679494,
+            1.570796326794853
+          ],
+          "angle_radians": 0.457924
+        },
+        {
+          "name": "right_knee",
+          "moving_body": "leg_2",
+          "world_origin_mm": [
+            -18.36515,
+            -35.3217,
+            65.25503
+          ],
+          "world_axis": [
+            0.0,
+            0.9961947,
+            0.08715574
+          ],
+          "range_radians": [
+            -1.5707963267949339,
+            1.5707963267948593
+          ],
+          "angle_radians": 0.00494
+        },
+        {
+          "name": "right_ankle",
+          "moving_body": "ankle_right",
+          "world_origin_mm": [
+            0.01617,
+            -57.93141,
+            25.36859
+          ],
+          "world_axis": [
+            -0.0,
+            -0.9961947,
+            -0.08715574
+          ],
+          "range_radians": [
+            -1.5707963267949028,
+            1.5707963267948903
+          ],
+          "angle_radians": -0.452984
+        }
+      ],
+      "servos": [
+        {
+          "instance": "trunk_base__xl330__4",
+          "matrix_mm_column_major": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            6.0,
+            17.5,
+            131.5,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "output_line_origin_world_mm": [
+            6.0,
+            17.5,
+            131.5
+          ],
+          "matches": [
+            {
+              "joint": "left_hip_yaw",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "trunk_base__xl330__7",
+          "matrix_mm_column_major": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            6.0,
+            -17.5,
+            131.5,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "output_line_origin_world_mm": [
+            6.0,
+            -17.5,
+            131.5
+          ],
+          "matches": [
+            {
+              "joint": "right_hip_yaw",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "yaw2roll__xl330__11",
+          "matrix_mm_column_major": [
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            6.0,
+            17.5,
+            102.5,
+            1.0
+          ],
+          "output_axis_world": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            6.0,
+            17.5,
+            102.5
+          ],
+          "matches": [
+            {
+              "joint": "left_hip_roll",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "upper_leg_left__xl330__17",
+          "matrix_mm_column_major": [
+            0.0,
+            0.9961947,
+            -0.08715574,
+            0.0,
+            0.8969722,
+            0.03853042,
+            0.44040467,
+            0.0,
+            0.44208695,
+            -0.07817628,
+            -0.89355895,
+            0.0,
+            -18.36515135,
+            51.7589165,
+            63.81696069,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            0.9961947,
+            -0.08715574
+          ],
+          "output_line_origin_world_mm": [
+            -18.36515,
+            51.75892,
+            63.81696
+          ],
+          "matches": [
+            {
+              "joint": "left_knee",
+              "axis_sign": -1,
+              "line_error_mm": 2e-06
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "upper_leg_left__xl330__20",
+          "matrix_mm_column_major": [
+            0.0,
+            0.9961947,
+            -0.08715574,
+            0.0,
+            -0.44208695,
+            0.07817628,
+            0.89355895,
+            0.0,
+            0.8969722,
+            0.03853042,
+            0.44040467,
+            0.0,
+            4.0,
+            54.85730118,
+            99.23165965,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            0.9961947,
+            -0.08715574
+          ],
+          "output_line_origin_world_mm": [
+            4.0,
+            54.8573,
+            99.23166
+          ],
+          "matches": [
+            {
+              "joint": "left_hip_pitch",
+              "axis_sign": 1,
+              "line_error_mm": 4e-06
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "leg__xl330__22",
+          "matrix_mm_column_major": [
+            -0.0,
+            -0.9961947,
+            0.08715574,
+            0.0,
+            -0.89914516,
+            -0.03814376,
+            -0.43598514,
+            0.0,
+            0.43765053,
+            -0.07836566,
+            -0.89572364,
+            0.0,
+            0.01617082,
+            43.48658512,
+            26.63234655,
+            1.0
+          ],
+          "output_axis_world": [
+            -0.0,
+            -0.9961947,
+            0.08715574
+          ],
+          "output_line_origin_world_mm": [
+            0.01617,
+            43.48659,
+            26.63235
+          ],
+          "matches": [
+            {
+              "joint": "left_ankle",
+              "axis_sign": -1,
+              "line_error_mm": 2e-06
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "neck__xl330__28",
+          "matrix_mm_column_major": [
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            -0.93969262,
+            0.0,
+            -0.34202014,
+            0.0,
+            0.34202014,
+            0.0,
+            -0.93969262,
+            0.0,
+            26.0,
+            0.0,
+            152.4215,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            26.0,
+            0.0,
+            152.4215
+          ],
+          "matches": [
+            {
+              "joint": "neck_pitch",
+              "axis_sign": 1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "neck__xl330__29",
+          "matrix_mm_column_major": [
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.93969262,
+            -0.0,
+            0.34202014,
+            0.0,
+            -0.34202014,
+            -0.0,
+            0.93969262,
+            0.0,
+            8.89899283,
+            -0.0,
+            199.40613104,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            8.89899,
+            -0.0,
+            199.40613
+          ],
+          "matches": [
+            {
+              "joint": "head_pitch",
+              "axis_sign": -1,
+              "line_error_mm": 3e-06
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "yaw_roll_motion__xl330__34",
+          "matrix_mm_column_major": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            -0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            8.89899283,
+            -0.0,
+            232.59923104,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "output_line_origin_world_mm": [
+            8.89899,
+            -0.0,
+            232.59923
+          ],
+          "matches": [
+            {
+              "joint": "head_yaw",
+              "axis_sign": 1,
+              "line_error_mm": 3e-06
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "jaw_soft__xl330__39",
+          "matrix_mm_column_major": [
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            8.99899283,
+            25.5,
+            235.59923104,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            8.99899,
+            25.5,
+            235.59923
+          ],
+          "matches": [],
+          "status": "no actuated joint in MJCF; mouth reference"
+        },
+        {
+          "instance": "jaw_soft__xl330__43",
+          "matrix_mm_column_major": [
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            -23.50100717,
+            -0.0,
+            232.59923104,
+            1.0
+          ],
+          "output_axis_world": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            -23.50101,
+            -0.0,
+            232.59923
+          ],
+          "matches": [
+            {
+              "joint": "head_roll",
+              "axis_sign": 1,
+              "line_error_mm": 1e-06
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "bearing_roll__xl330__54",
+          "matrix_mm_column_major": [
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            6.0,
+            -17.5,
+            102.5,
+            1.0
+          ],
+          "output_axis_world": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "output_line_origin_world_mm": [
+            6.0,
+            -17.5,
+            102.5
+          ],
+          "matches": [
+            {
+              "joint": "right_hip_roll",
+              "axis_sign": -1,
+              "line_error_mm": 0.0
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "upper_leg_right__xl330__59",
+          "matrix_mm_column_major": [
+            -0.0,
+            -0.9961947,
+            -0.08715574,
+            0.0,
+            -0.8969722,
+            0.03853042,
+            -0.44040467,
+            0.0,
+            0.44208695,
+            0.07817628,
+            -0.89355895,
+            0.0,
+            -18.36515135,
+            -51.7589165,
+            63.81696069,
+            1.0
+          ],
+          "output_axis_world": [
+            -0.0,
+            -0.9961947,
+            -0.08715574
+          ],
+          "output_line_origin_world_mm": [
+            -18.36515,
+            -51.75892,
+            63.81696
+          ],
+          "matches": [
+            {
+              "joint": "right_knee",
+              "axis_sign": -1,
+              "line_error_mm": 2e-06
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "upper_leg_right__xl330__63",
+          "matrix_mm_column_major": [
+            -0.0,
+            -0.9961947,
+            -0.08715574,
+            0.0,
+            0.44208695,
+            0.07817628,
+            -0.89355895,
+            0.0,
+            0.8969722,
+            -0.03853042,
+            0.44040467,
+            0.0,
+            4.0,
+            -54.85730118,
+            99.23165965,
+            1.0
+          ],
+          "output_axis_world": [
+            -0.0,
+            -0.9961947,
+            -0.08715574
+          ],
+          "output_line_origin_world_mm": [
+            4.0,
+            -54.8573,
+            99.23166
+          ],
+          "matches": [
+            {
+              "joint": "right_hip_pitch",
+              "axis_sign": 1,
+              "line_error_mm": 4e-06
+            }
+          ],
+          "status": "14-axis match"
+        },
+        {
+          "instance": "leg_2__xl330__64",
+          "matrix_mm_column_major": [
+            0.0,
+            0.9961947,
+            0.08715574,
+            0.0,
+            0.89914516,
+            -0.03814376,
+            0.43598514,
+            0.0,
+            0.43765053,
+            0.07836566,
+            -0.89572364,
+            0.0,
+            0.01617082,
+            -43.48658512,
+            26.63234655,
+            1.0
+          ],
+          "output_axis_world": [
+            0.0,
+            0.9961947,
+            0.08715574
+          ],
+          "output_line_origin_world_mm": [
+            0.01617,
+            -43.48659,
+            26.63235
+          ],
+          "matches": [
+            {
+              "joint": "right_ankle",
+              "axis_sign": -1,
+              "line_error_mm": 2e-06
+            }
+          ],
+          "status": "14-axis match"
+        }
+      ]
+    }
+  }
+}

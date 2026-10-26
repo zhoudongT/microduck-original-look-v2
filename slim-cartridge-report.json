@@ -1,0 +1,623 @@
+{
+  "revision": "v2 slim cartridge fit prototype",
+  "units": "mm",
+  "parameters": {
+    "outer_width": 35.7,
+    "outer_depth": 29.2,
+    "outer_height": 50.7,
+    "cavity_width": 29.7,
+    "cavity_depth": 23.2,
+    "cavity_height": 44.7,
+    "split_gap": 0.24,
+    "shaft_z_assumed": 11.0,
+    "output_opening_radius": 12.0,
+    "clamp_x": 12.5,
+    "clamp_z_top": 25.5,
+    "clamp_z_bottom": -26.5,
+    "clamp_boss_radius": 4.4,
+    "m3_clearance_radius": 1.65,
+    "m3_nut_across_flats": 5.8,
+    "m3_nut_depth": 2.8,
+    "m3_head_radius": 3.0,
+    "m3_head_depth": 2.4,
+    "top_flange_width": 36.0,
+    "top_flange_depth": 32.0,
+    "top_flange_height": 4.0,
+    "top_flange_z": 27.35,
+    "yoke_floor_z": -34.0,
+    "yoke_top_z": 27.0,
+    "yoke_tool_access_radius": 1.8
+  },
+  "parts": {
+    "P01_cage_back": {
+      "brep_valid": true,
+      "solid_count": 1,
+      "volume_mm3": 13582.735582563215,
+      "bbox_v1_mm": {
+        "min": [
+          -18.0,
+          -19.5,
+          -30.9000001
+        ],
+        "max": [
+          18.0,
+          -0.11999989999999744,
+          29.900000000000002
+        ],
+        "size": [
+          36.0,
+          19.380000100000004,
+          60.800000100000005
+        ]
+      },
+      "bbox_xl_mm": {
+        "min": [
+          -19.5,
+          -18.0,
+          -41.9000001
+        ],
+        "max": [
+          -0.11999989999999557,
+          18.0,
+          18.900000000000002
+        ],
+        "size": [
+          19.380000100000004,
+          36.0,
+          60.800000100000005
+        ]
+      },
+      "within_v1_target_envelope": true,
+      "within_xl_2x_target_envelope": true,
+      "motor_cavity_intersection_mm3": 0.0,
+      "clamp_bore_obstruction_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "P02_cage_front": {
+      "brep_valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11719.37081137574,
+      "bbox_v1_mm": {
+        "min": [
+          -18.0,
+          0.11999989999999744,
+          -30.9000001
+        ],
+        "max": [
+          18.0,
+          16.0,
+          29.9
+        ],
+        "size": [
+          36.0,
+          15.880000100000002,
+          60.8000001
+        ]
+      },
+      "bbox_xl_mm": {
+        "min": [
+          0.11999989999999557,
+          -18.0,
+          -41.9000001
+        ],
+        "max": [
+          16.000000000000004,
+          18.000000000000004,
+          18.9
+        ],
+        "size": [
+          15.880000100000007,
+          36.0,
+          60.8000001
+        ]
+      },
+      "within_v1_target_envelope": true,
+      "within_xl_2x_target_envelope": true,
+      "motor_cavity_intersection_mm3": 0.0,
+      "clamp_bore_obstruction_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "P03_output_yoke": {
+      "brep_valid": true,
+      "solid_count": 1,
+      "volume_mm3": 15325.670642305604,
+      "bbox_v1_mm": {
+        "min": [
+          -15.0,
+          -24.0,
+          -36.0
+        ],
+        "max": [
+          15.0,
+          24.0,
+          27.0
+        ],
+        "size": [
+          30.0,
+          48.0,
+          63.0
+        ]
+      },
+      "bbox_xl_mm": {
+        "min": [
+          -24.0,
+          -15.000000000000004,
+          -47.0
+        ],
+        "max": [
+          24.000000000000004,
+          15.000000000000004,
+          16.0
+        ],
+        "size": [
+          48.0,
+          30.000000000000007,
+          63.0
+        ]
+      },
+      "within_v1_target_envelope": true,
+      "within_xl_2x_target_envelope": true,
+      "motor_cavity_intersection_mm3": 0.0,
+      "clamp_bore_obstruction_mm3": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "clamp_screws": [
+    {
+      "axis_point_v1_mm": [
+        -12.5,
+        0.0,
+        -26.5
+      ],
+      "axis_direction_v1": [
+        0,
+        1,
+        0
+      ],
+      "axis_point_xl_mm": [
+        0,
+        12.5,
+        -37.5
+      ],
+      "axis_direction_xl": [
+        1,
+        0,
+        0
+      ],
+      "front_head_seat_y_mm": 12.2,
+      "rear_nut_opening_y_mm": -14.6,
+      "bore_radius_mm": 1.65,
+      "bore_to_cavity_ligament_z_mm": 2.4999999999999987,
+      "bore_intersection_with_cavity_mm3": 0.0,
+      "nut_intersection_with_cavity_mm3": 0.0,
+      "head_intersection_with_cavity_mm3": 0.0
+    },
+    {
+      "axis_point_v1_mm": [
+        -12.5,
+        0.0,
+        25.5
+      ],
+      "axis_direction_v1": [
+        0,
+        1,
+        0
+      ],
+      "axis_point_xl_mm": [
+        0,
+        12.5,
+        14.5
+      ],
+      "axis_direction_xl": [
+        1,
+        0,
+        0
+      ],
+      "front_head_seat_y_mm": 12.2,
+      "rear_nut_opening_y_mm": -14.6,
+      "bore_radius_mm": 1.65,
+      "bore_to_cavity_ligament_z_mm": 1.4999999999999987,
+      "bore_intersection_with_cavity_mm3": 0.0,
+      "nut_intersection_with_cavity_mm3": 0.0,
+      "head_intersection_with_cavity_mm3": 0.0
+    },
+    {
+      "axis_point_v1_mm": [
+        12.5,
+        0.0,
+        -26.5
+      ],
+      "axis_direction_v1": [
+        0,
+        1,
+        0
+      ],
+      "axis_point_xl_mm": [
+        0,
+        -12.5,
+        -37.5
+      ],
+      "axis_direction_xl": [
+        1,
+        0,
+        0
+      ],
+      "front_head_seat_y_mm": 12.2,
+      "rear_nut_opening_y_mm": -14.6,
+      "bore_radius_mm": 1.65,
+      "bore_to_cavity_ligament_z_mm": 2.4999999999999987,
+      "bore_intersection_with_cavity_mm3": 0.0,
+      "nut_intersection_with_cavity_mm3": 0.0,
+      "head_intersection_with_cavity_mm3": 0.0
+    },
+    {
+      "axis_point_v1_mm": [
+        12.5,
+        0.0,
+        25.5
+      ],
+      "axis_direction_v1": [
+        0,
+        1,
+        0
+      ],
+      "axis_point_xl_mm": [
+        0,
+        -12.5,
+        14.5
+      ],
+      "axis_direction_xl": [
+        1,
+        0,
+        0
+      ],
+      "front_head_seat_y_mm": 12.2,
+      "rear_nut_opening_y_mm": -14.6,
+      "bore_radius_mm": 1.65,
+      "bore_to_cavity_ligament_z_mm": 1.4999999999999987,
+      "bore_intersection_with_cavity_mm3": 0.0,
+      "nut_intersection_with_cavity_mm3": 0.0,
+      "head_intersection_with_cavity_mm3": 0.0
+    }
+  ],
+  "clamp_holes_v1_mm": [
+    [
+      -12.5,
+      0.0,
+      -26.5
+    ],
+    [
+      -12.5,
+      0.0,
+      25.5
+    ],
+    [
+      12.5,
+      0.0,
+      -26.5
+    ],
+    [
+      12.5,
+      0.0,
+      25.5
+    ]
+  ],
+  "transform_v1_to_xl_row_major": [
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      -1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      -11.0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "limits_v1_mm": {
+    "min": [
+      -20,
+      -29,
+      -38
+    ],
+    "max": [
+      20,
+      29,
+      30
+    ]
+  },
+  "limits_xl_mm": {
+    "min": [
+      -29,
+      -20,
+      -49
+    ],
+    "max": [
+      29,
+      20,
+      19
+    ]
+  },
+  "top_flange": {
+    "size_mm": [
+      36.0,
+      32.0,
+      4.0
+    ],
+    "center_v1_mm": [
+      0,
+      0,
+      27.35
+    ],
+    "mounting_holes": "None: solid pad reserved for the actual v2 interconnect pattern; v1 ±20 mm holes intentionally removed."
+  },
+  "rear_m5": {
+    "axis_point_v1_mm": [
+      0,
+      0,
+      11.0
+    ],
+    "bore_diameter_mm": 5.3,
+    "nut_hex_circumdiameter_mm": 9.5,
+    "nut_pocket_depth_mm": 4.0,
+    "nut_pocket_y_range_mm": [
+      -19.5,
+      -15.5
+    ]
+  },
+  "connector_relief": {
+    "size_mm": [
+      14,
+      40,
+      8
+    ],
+    "center_v1_mm": [
+      0,
+      0,
+      -20
+    ],
+    "status": "Provisional service opening; real plug not measured."
+  },
+  "matched_P03": {
+    "floor_center_z_mm": -34.0,
+    "floor_size_mm": [
+      30,
+      48,
+      4
+    ],
+    "cheek_z_range_mm": [
+      -34.0,
+      27.0
+    ],
+    "shaft_center_v1_mm": [
+      0,
+      0,
+      11.0
+    ],
+    "passive_bearing_hole_diameter_mm": 10.15,
+    "drive_opening_diameter_mm": 24.5,
+    "drive_bolt_centers_v1_mm": [
+      [
+        -10,
+        22,
+        1
+      ],
+      [
+        -10,
+        22,
+        21
+      ],
+      [
+        10,
+        22,
+        1
+      ],
+      [
+        10,
+        22,
+        21
+      ]
+    ],
+    "floor_bolt_centers_v1_mm": [
+      [
+        -10,
+        -14,
+        -34.0
+      ],
+      [
+        -10,
+        14,
+        -34.0
+      ],
+      [
+        10,
+        -14,
+        -34.0
+      ],
+      [
+        10,
+        14,
+        -34.0
+      ]
+    ],
+    "clamp_tool_access_diameter_mm": 3.6,
+    "clamp_tool_access_note": "Along Y through both cheeks; upper openings meet the top edge. Intended for 2.5 mm Allen key. Hardware/adjacent-part tool access still requires assembly review.",
+    "housing_static_intersection_mm3": {
+      "P01_cage_back": 0.0,
+      "P02_cage_front": 0.0
+    },
+    "floor_to_lower_boss_nominal_z_gap_mm": 1.1000000000000014,
+    "status": "Static modeled pose only; no full-range motion or physical fit verification."
+  },
+  "checks": {
+    "all_valid_single_solids": true,
+    "all_inside_target_envelope": true,
+    "cavity_empty": true,
+    "clamp_bores_clear": true,
+    "clamp_hardware_clear_of_cavity": true,
+    "halves_do_not_overlap": true,
+    "housing_yoke_static_intersection_zero": true
+  },
+  "unverified": [
+    "real UBT shaft datum and orientation",
+    "real horn and plug geometry",
+    "physical assembly fit",
+    "tool and screw access with installed adjacent parts",
+    "full-range swept interference",
+    "strength, friction and fatigue",
+    "walking"
+  ],
+  "exports": {
+    "v1/P01_cage_back": {
+      "step": "cad/slim_cartridge/v1/step/P01_cage_back.step",
+      "stl": "cad/slim_cartridge/v1/stl/P01_cage_back.stl",
+      "step_reimport_valid": true,
+      "step_reimport_solid_count": 1,
+      "step_volume_error_mm3": 9.534817218082026e-05,
+      "stl_watertight": true,
+      "stl_winding_consistent": true,
+      "stl_positive_volume": true,
+      "stl_connected_components": 1,
+      "stl_triangles": 6760
+    },
+    "v1/P02_cage_front": {
+      "step": "cad/slim_cartridge/v1/step/P02_cage_front.step",
+      "stl": "cad/slim_cartridge/v1/stl/P02_cage_front.stl",
+      "step_reimport_valid": true,
+      "step_reimport_solid_count": 1,
+      "step_volume_error_mm3": 9.573356146574952e-05,
+      "stl_watertight": true,
+      "stl_winding_consistent": true,
+      "stl_positive_volume": true,
+      "stl_connected_components": 1,
+      "stl_triangles": 7976
+    },
+    "v1/P03_output_yoke": {
+      "step": "cad/slim_cartridge/v1/step/P03_output_yoke.step",
+      "stl": "cad/slim_cartridge/v1/stl/P03_output_yoke.stl",
+      "step_reimport_valid": true,
+      "step_reimport_solid_count": 1,
+      "step_volume_error_mm3": 2.4010660126805305e-10,
+      "stl_watertight": true,
+      "stl_winding_consistent": true,
+      "stl_positive_volume": true,
+      "stl_connected_components": 1,
+      "stl_triangles": 7396
+    },
+    "xl/P01_cage_back": {
+      "step": "cad/slim_cartridge/xl/step/P01_cage_back.step",
+      "stl": "cad/slim_cartridge/xl/stl/P01_cage_back.stl",
+      "step_reimport_valid": true,
+      "step_reimport_solid_count": 1,
+      "step_volume_error_mm3": 9.534821765555535e-05,
+      "stl_watertight": true,
+      "stl_winding_consistent": true,
+      "stl_positive_volume": true,
+      "stl_connected_components": 1,
+      "stl_triangles": 6760
+    },
+    "xl/P02_cage_front": {
+      "step": "cad/slim_cartridge/xl/step/P02_cage_front.step",
+      "stl": "cad/slim_cartridge/xl/stl/P02_cage_front.stl",
+      "step_reimport_valid": true,
+      "step_reimport_solid_count": 1,
+      "step_volume_error_mm3": 9.573352690495085e-05,
+      "stl_watertight": true,
+      "stl_winding_consistent": true,
+      "stl_positive_volume": true,
+      "stl_connected_components": 1,
+      "stl_triangles": 7976
+    },
+    "xl/P03_output_yoke": {
+      "step": "cad/slim_cartridge/xl/step/P03_output_yoke.step",
+      "stl": "cad/slim_cartridge/xl/stl/P03_output_yoke.stl",
+      "step_reimport_valid": true,
+      "step_reimport_solid_count": 1,
+      "step_volume_error_mm3": 2.473825588822365e-10,
+      "stl_watertight": true,
+      "stl_winding_consistent": true,
+      "stl_positive_volume": true,
+      "stl_connected_components": 1,
+      "stl_triangles": 7396
+    }
+  },
+  "legacy_v1_P03_compatibility": {
+    "reference_step": "external-reference/microduck-budget-v1/cad/step/P03_output_yoke.step",
+    "scope": "Actual CAD Boolean intersection in the same nominal v1 local pose; no motion or real-hardware fit test.",
+    "intersections": {
+      "P01_cage_back": {
+        "volume_mm3": 475.4198177175917,
+        "bbox_v1_mm": {
+          "min": [
+            -15.0000001,
+            -14.600000100000022,
+            -30.9000001
+          ],
+          "max": [
+            15.0000001,
+            -0.11999989999999744,
+            -27.199999899999998
+          ],
+          "size": [
+            30.0000002,
+            14.480000200000024,
+            3.7000002000000016
+          ]
+        }
+      },
+      "P02_cage_front": {
+        "volume_mm3": 482.4903810691638,
+        "bbox_v1_mm": {
+          "min": [
+            -15.0000001,
+            0.11999989999999744,
+            -30.9000001
+          ],
+          "max": [
+            15.0000001,
+            14.600000100000017,
+            -27.199999899999998
+          ],
+          "size": [
+            30.0000002,
+            14.480000200000019,
+            3.7000002000000016
+          ]
+        }
+      }
+    },
+    "may_reuse_unchanged": false,
+    "required_change": "Old P03 floor occupies Z[-31.2,-27.2] and intersects the new lower clamp bosses. The separately exported v2 P03 moves its floor center to -34.0 and extends both cheeks. The original v1 file remains unchanged; see matched_P03 for the new static check.",
+    "reference_available_in_package": false,
+    "reference_note": "Historical external v1 STEP reference from the original validation; not included in this package. Optional regeneration looks for source/cartridge-v1/P03_output_yoke.step and skips this comparison if absent."
+  },
+  "assembly_export_frame": "original v1 local frame; no XL rotation applied",
+  "assembly_stl_dir": "cad/adapter-stl",
+  "assembly_step_dir": "cad/adapter-step"
+}

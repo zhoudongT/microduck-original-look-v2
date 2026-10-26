@@ -1,0 +1,142 @@
+{
+  "scope": "17 exported exterior meshes vs original vertices and topology after uniform 2x scale; does not validate assembly/manufacturing",
+  "passed": true,
+  "parts": [
+    {
+      "part": "ankle_left",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 8.242968960603897e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "ankle_right",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 8.242968960603897e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "bottom_head_shell",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 5.311678754531886e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "face_part",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 5.381939671090757e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "foot_left",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 8.469943761089475e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "foot_right",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 8.469943761089475e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "jaw",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 5.23910926421779e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "jaw_soft",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 5.272953332872746e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "left_shell",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 5.581235843047917e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "noenoeil",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 4.592127136837726e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "right_shell",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 5.463587512587449e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "soft_mouth_top",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 5.352836431662279e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "sole_left",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 8.607507144122818e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "sole_right",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 8.62791387824001e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "top_head_shell",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 8.631979146492589e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "upper_leg_left",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 8.508236827876797e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    },
+    {
+      "part": "upper_leg_right",
+      "scale": 2,
+      "maximum_vertex_deviation_mm": 8.508236827876797e-06,
+      "same_triangle_count": true,
+      "watertight": true,
+      "passed": true
+    }
+  ]
+}

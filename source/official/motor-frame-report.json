@@ -1,0 +1,1489 @@
+{
+  "source_commit": "b02fdea4902c2b93b7d34a83a6f05da4ececb7d3",
+  "pose": "official scene_walk STAND",
+  "world_units": "mm",
+  "world_axes": "+X forward, +Y left, +Z up",
+  "xl330_local_bbox_mm": [
+    [
+      -14.5,
+      -10,
+      -24.5
+    ],
+    [
+      14.5,
+      10,
+      9.5
+    ]
+  ],
+  "xl330_output_line": {
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "axis": [
+      1,
+      0,
+      0
+    ]
+  },
+  "assembly_formula": "M_new = M_official_with_scaled_translation @ C; keep C geometry dimensions unscaled. For common outer scale s, original exterior vertices and translations both scale by s. Rebasing floor is a separate world translation.",
+  "motors": [
+    {
+      "instance": "trunk_base__xl330__4",
+      "matrix_mm_column_major": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        6.0,
+        17.5,
+        131.5,
+        1.0
+      ],
+      "output_axis_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "output_line_origin_world_mm": [
+        6.0,
+        17.5,
+        131.5
+      ],
+      "matches": [
+        {
+          "joint": "left_hip_yaw",
+          "axis_sign": -1,
+          "line_error_mm": 0.0
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -16.5,
+        0.0,
+        0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "trunk_base__xl330__7",
+      "matrix_mm_column_major": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        6.0,
+        -17.5,
+        131.5,
+        1.0
+      ],
+      "output_axis_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "output_line_origin_world_mm": [
+        6.0,
+        -17.5,
+        131.5
+      ],
+      "matches": [
+        {
+          "joint": "right_hip_yaw",
+          "axis_sign": -1,
+          "line_error_mm": 0.0
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -16.5,
+        0.0,
+        0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "yaw2roll__xl330__11",
+      "matrix_mm_column_major": [
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        6.0,
+        17.5,
+        102.5,
+        1.0
+      ],
+      "output_axis_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "output_line_origin_world_mm": [
+        6.0,
+        17.5,
+        102.5
+      ],
+      "matches": [
+        {
+          "joint": "left_hip_roll",
+          "axis_sign": -1,
+          "line_error_mm": 0.0
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -16.5,
+        0.0,
+        0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "upper_leg_left__xl330__17",
+      "matrix_mm_column_major": [
+        0.0,
+        0.9961947,
+        -0.08715574,
+        0.0,
+        0.8969722,
+        0.03853042,
+        0.44040467,
+        0.0,
+        0.44208695,
+        -0.07817628,
+        -0.89355895,
+        0.0,
+        -18.36515135,
+        51.7589165,
+        63.81696069,
+        1.0
+      ],
+      "output_axis_world": [
+        0.0,
+        0.9961947,
+        -0.08715574
+      ],
+      "output_line_origin_world_mm": [
+        -18.36515,
+        51.75892,
+        63.81696
+      ],
+      "matches": [
+        {
+          "joint": "left_knee",
+          "axis_sign": -1,
+          "line_error_mm": 2e-06
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -16.5,
+        0.0,
+        0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "upper_leg_left__xl330__20",
+      "matrix_mm_column_major": [
+        0.0,
+        0.9961947,
+        -0.08715574,
+        0.0,
+        -0.44208695,
+        0.07817628,
+        0.89355895,
+        0.0,
+        0.8969722,
+        0.03853042,
+        0.44040467,
+        0.0,
+        4.0,
+        54.85730118,
+        99.23165965,
+        1.0
+      ],
+      "output_axis_world": [
+        0.0,
+        0.9961947,
+        -0.08715574
+      ],
+      "output_line_origin_world_mm": [
+        4.0,
+        54.8573,
+        99.23166
+      ],
+      "matches": [
+        {
+          "joint": "left_hip_pitch",
+          "axis_sign": 1,
+          "line_error_mm": 4e-06
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -12.5,
+        0.0,
+        0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "leg__xl330__22",
+      "matrix_mm_column_major": [
+        -0.0,
+        -0.9961947,
+        0.08715574,
+        0.0,
+        -0.89914516,
+        -0.03814376,
+        -0.43598514,
+        0.0,
+        0.43765053,
+        -0.07836566,
+        -0.89572364,
+        0.0,
+        0.01617082,
+        43.48658512,
+        26.63234655,
+        1.0
+      ],
+      "output_axis_world": [
+        -0.0,
+        -0.9961947,
+        0.08715574
+      ],
+      "output_line_origin_world_mm": [
+        0.01617,
+        43.48659,
+        26.63235
+      ],
+      "matches": [
+        {
+          "joint": "left_ankle",
+          "axis_sign": -1,
+          "line_error_mm": 2e-06
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -14.5,
+        -0.0,
+        -0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "neck__xl330__28",
+      "matrix_mm_column_major": [
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        -0.93969262,
+        0.0,
+        -0.34202014,
+        0.0,
+        0.34202014,
+        0.0,
+        -0.93969262,
+        0.0,
+        26.0,
+        0.0,
+        152.4215,
+        1.0
+      ],
+      "output_axis_world": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "output_line_origin_world_mm": [
+        26.0,
+        0.0,
+        152.4215
+      ],
+      "matches": [
+        {
+          "joint": "neck_pitch",
+          "axis_sign": 1,
+          "line_error_mm": 0.0
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -14.5,
+        0.0,
+        0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "neck__xl330__29",
+      "matrix_mm_column_major": [
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.93969262,
+        -0.0,
+        0.34202014,
+        0.0,
+        -0.34202014,
+        -0.0,
+        0.93969262,
+        0.0,
+        8.89899283,
+        -0.0,
+        199.40613104,
+        1.0
+      ],
+      "output_axis_world": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "output_line_origin_world_mm": [
+        8.89899,
+        -0.0,
+        199.40613
+      ],
+      "matches": [
+        {
+          "joint": "head_pitch",
+          "axis_sign": -1,
+          "line_error_mm": 3e-06
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -14.5,
+        -0.0,
+        -0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "yaw_roll_motion__xl330__34",
+      "matrix_mm_column_major": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        8.89899283,
+        -0.0,
+        232.59923104,
+        1.0
+      ],
+      "output_axis_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "output_line_origin_world_mm": [
+        8.89899,
+        -0.0,
+        232.59923
+      ],
+      "matches": [
+        {
+          "joint": "head_yaw",
+          "axis_sign": 1,
+          "line_error_mm": 3e-06
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -14.5,
+        -0.0,
+        0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "jaw_soft__xl330__39",
+      "matrix_mm_column_major": [
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        8.99899283,
+        25.5,
+        235.59923104,
+        1.0
+      ],
+      "output_axis_world": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "output_line_origin_world_mm": [
+        8.99899,
+        25.5,
+        235.59923
+      ],
+      "matches": [],
+      "status": "no actuated joint in MJCF; mouth reference",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": null,
+      "joint_anchor_side_x": null,
+      "mouth_passive_bearing_reference": [
+        {
+          "instance": "jaw_soft__seeed_bearing__configuration_default__44",
+          "bearing_origin_in_motor_local_mm": [
+            65.5,
+            0.2,
+            0.0
+          ],
+          "line_distance_mm": 0.2
+        }
+      ],
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "jaw_soft__xl330__43",
+      "matrix_mm_column_major": [
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -23.50100717,
+        -0.0,
+        232.59923104,
+        1.0
+      ],
+      "output_axis_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "output_line_origin_world_mm": [
+        -23.50101,
+        -0.0,
+        232.59923
+      ],
+      "matches": [
+        {
+          "joint": "head_roll",
+          "axis_sign": 1,
+          "line_error_mm": 1e-06
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -14.5,
+        -0.0,
+        0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "bearing_roll__xl330__54",
+      "matrix_mm_column_major": [
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        6.0,
+        -17.5,
+        102.5,
+        1.0
+      ],
+      "output_axis_world": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "output_line_origin_world_mm": [
+        6.0,
+        -17.5,
+        102.5
+      ],
+      "matches": [
+        {
+          "joint": "right_hip_roll",
+          "axis_sign": -1,
+          "line_error_mm": 0.0
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -16.5,
+        0.0,
+        0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "upper_leg_right__xl330__59",
+      "matrix_mm_column_major": [
+        -0.0,
+        -0.9961947,
+        -0.08715574,
+        0.0,
+        -0.8969722,
+        0.03853042,
+        -0.44040467,
+        0.0,
+        0.44208695,
+        0.07817628,
+        -0.89355895,
+        0.0,
+        -18.36515135,
+        -51.7589165,
+        63.81696069,
+        1.0
+      ],
+      "output_axis_world": [
+        -0.0,
+        -0.9961947,
+        -0.08715574
+      ],
+      "output_line_origin_world_mm": [
+        -18.36515,
+        -51.75892,
+        63.81696
+      ],
+      "matches": [
+        {
+          "joint": "right_knee",
+          "axis_sign": -1,
+          "line_error_mm": 2e-06
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -16.5,
+        -0.0,
+        0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "upper_leg_right__xl330__63",
+      "matrix_mm_column_major": [
+        -0.0,
+        -0.9961947,
+        -0.08715574,
+        0.0,
+        0.44208695,
+        0.07817628,
+        -0.89355895,
+        0.0,
+        0.8969722,
+        -0.03853042,
+        0.44040467,
+        0.0,
+        4.0,
+        -54.85730118,
+        99.23165965,
+        1.0
+      ],
+      "output_axis_world": [
+        -0.0,
+        -0.9961947,
+        -0.08715574
+      ],
+      "output_line_origin_world_mm": [
+        4.0,
+        -54.8573,
+        99.23166
+      ],
+      "matches": [
+        {
+          "joint": "right_hip_pitch",
+          "axis_sign": 1,
+          "line_error_mm": 4e-06
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -12.5,
+        -0.0,
+        0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    },
+    {
+      "instance": "leg_2__xl330__64",
+      "matrix_mm_column_major": [
+        0.0,
+        0.9961947,
+        0.08715574,
+        0.0,
+        0.89914516,
+        -0.03814376,
+        0.43598514,
+        0.0,
+        0.43765053,
+        0.07836566,
+        -0.89572364,
+        0.0,
+        0.01617082,
+        -43.48658512,
+        26.63234655,
+        1.0
+      ],
+      "output_axis_world": [
+        0.0,
+        0.9961947,
+        0.08715574
+      ],
+      "output_line_origin_world_mm": [
+        0.01617,
+        -43.48659,
+        26.63235
+      ],
+      "matches": [
+        {
+          "joint": "right_ankle",
+          "axis_sign": -1,
+          "line_error_mm": 2e-06
+        }
+      ],
+      "status": "14-axis match",
+      "geometry": "xl330",
+      "local_output_line": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      },
+      "joint_anchor_in_xl330_local_mm": [
+        -14.5,
+        0.0,
+        -0.0
+      ],
+      "joint_anchor_side_x": -1,
+      "v1_module_to_xl330_local_candidates": {
+        "-1": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ],
+        "1": [
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          -11.0,
+          1.0
+        ]
+      },
+      "alignment_note": "v1 axis is local +Y through (0,0,11). Candidate sign maps v1 +Y to +/- XL local X; body long axis stays +Z. Joint-anchor side is a geometric datum, not proof of the real drive-horn face. Existing mesh/adapter must be checked before choosing side."
+    }
+  ]
+}
